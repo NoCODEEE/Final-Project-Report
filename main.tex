@@ -1,0 +1,754 @@
+
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[a4paper,left=1.5in,right=1in,top=1.2in,bottom=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{ucharclasses}
+\setmainfont{Times New Roman}
+\setsansfont{Angsana New}
+\setmonofont{Courier New}
+\newfontfamily\thaifont{Angsana New}
+\setTransitionTo{Thai}{\thaifont}
+\setTransitionFrom{Thai}{\normalfont}
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{0.25em}
+\renewcommand{\baselinestretch}{1.15}
+\setlist[itemize]{leftmargin=0.65in,itemsep=0.1em,topsep=0.2em}
+\titleformat{\chapter}[display]{\normalfont\bfseries\centering}{CHAPTER \thechapter}{0.5em}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-20pt}{24pt}
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries}{\thesubsubsection}{1em}{}
+\captionsetup{font=small,labelfont=bf}
+\renewcommand{\contentsname}{CONTENTS}
+\renewcommand{\listtablename}{LIST OF TABLES}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\bibname}{REFERENCES}
+\setlength{\headheight}{14.5pt}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\fancyhead[R]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{fancy}
+\begin{document}
+
+\pagenumbering{gobble}
+\begin{titlepage}
+\centering
+\small
+\begin{figure}[H]\centering
+\includegraphics[width=0.2\textwidth]{figures/figure_5.jpg}
+\end{figure}
+{\MakeUppercase{AI-POWERED FILE ORGANIZER APPLICATION}\par}
+\vspace{2in}
+{SARUN KHUMTHAI}\par
+{SUPAKORN TUNGPATOMPRAMOTE}\par
+{PUWADECH INTONG}\par
+\vfill
+{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT\par}
+{OF THE REQUIREMENTS FOR\par}
+{THE DEGREE OF BACHELOR OF ENGINEERING (COMPUTER ENGINEERING)\par}
+{FACULTY OF ENGINEERING\par}
+{KING MONGKUT'S UNIVERSITY OF TECHNOLOGY THONBURI\par}
+{2025\par}
+\end{titlepage}
+
+\clearpage
+\thispagestyle{empty}
+\small
+\begin{center}
+\vspace{0.2in}
+AI-powered file organizer application\\[1in]
+Mr. Sarun Khumthai\\[0.08in]
+Mr. Supakorn Tungpatompramote\\[0.08in]
+Mr. Puwadech Intong\\[0.08in]
+\vspace{1in}
+A Project Submitted in Partial Fulfillment\\
+of the Requirements for\\
+the Degree of Bachelor of Engineering (Computer Engineering)\\
+Faculty of Engineering\\
+King Mongkut's University of Technology Thonburi\\
+2025
+\end{center}
+\vspace{0.35in}
+\noindent Project Committee
+\vspace{0.8cm}
+
+% Committee signatures: use a consistent two-column table for alignment
+\begin{tabular}{@{}p{0.62\textwidth}p{0.36\textwidth}@{}}
+\dotfill & Project Advisor \\
+\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Suthathip Maneewongvatana, Ph.D.)} & \\
+\\[0.2in]
+\dotfill & Committee Member \\
+\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Name, Title)} & \\
+\\[0.2in]
+\dotfill & Committee Member \\
+\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Name, Title)} & \\
+\\[0.2in]
+\dotfill & Committee Member \\
+\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Name, Title)} & \\
+\end{tabular}
+
+\vfill
+\begin{center}
+\bfseries Copyright reserved
+\end{center}
+
+\clearpage
+\pagenumbering{roman}\setcounter{page}{2}
+\begin{flushleft}
+\begin{tabular}{@{}p{0.18\textwidth}p{0.72\textwidth}@{}}
+Project Title & AI-powered file organizer application \\
+Credits & 3 \\
+Member(s) & Mr. Sarun Khumthai \\
+ & Mr. Supakorn Tungpatompramote \\
+ & Mr. Puwadech Intong \\
+Project Advisor & Suthathip Maneewongvatana, Ph.D. \\
+Program & Bachelor of Engineering \\
+Field of Study & Computer Engineering \\
+Department & Computer Engineering \\
+Faculty & Engineering \\
+Academic Year & 2025 \\
+\end{tabular}
+\end{flushleft}
+
+\begin{center}
+\textbf{Abstract}
+\end{center}
+
+The project, “AI-powered file organizer application”, is motivated by the fact that nowadays almost everyone owns a computer and inevitable to create or handle “files.” The number of them is enormous, managing them can become troublesome. This project is going to address this common problem by developing a desktop application that can automatically read and understand file's content to organize files with more precision. Our objective then is for this solution to assist with and reduce the burden of manual file management. Furthermore, aside from organization, it may also integrate AI to perform more advanced actions which aims to establish a foundation for agentic systems related to file management such as summarization, note taking, searching or calendar taking. Everything must be done locally, bringing greater convenience and ease to users. The performance evaluation of the “AI-powered file organizer application” showed that the overall performance was at the level of effectively solving the problem with minor improvements possible (mean score of 4.31) and standard deviation was 0.19, indicating that the experts’ opinions regarding the application’s performance were similar and consistent. The experts also provided overall comments on the “AI-powered file organizer application”, stating that the application has academic value and can be applied in real-world use. It can be further developed as an Open-Source Project. The application has a very strong foundation and is ready for personal use or small teams.
+
+\vspace{1em}
+\begin{flushleft}
+\begin{tabular*}{\textwidth}{@{}lp{0.8\textwidth}}
+\textbf{Keywords}: & AI-powered file organizer application / File organization / Classification / LLM / RAG
+\end{tabular*}
+\end{flushleft}
+
+\clearpage
+{\thaifont\normalsize
+\setTransitionTo{Thai}{\thaifont}
+\setTransitionFrom{Thai}{\thaifont}
+\begin{flushleft}
+\begin{tabular}{@{}p{0.22\textwidth}p{0.72\textwidth}@{}}
+หัวข้อปริญญานิพนธ์ & แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI \\
+หน่วยกิต & 3 \\
+ผู้จัดทำ & นายศรัณย์ คำไทย \\
+ & นายศุภกร ตั้งปฐมปราโมทย์ \\
+ & นายภูวเดช อินทอง \\
+อาจารย์ที่ปรึกษา & ดร. สุธาทิพย์ มณีวงศ์วัฒนา \\
+หลักสูตร & วิศวกรรมศาสตรบัณฑิต \\
+สาขาวิชา & วิศวกรรมคอมพิวเตอร์ \\
+ภาควิชา & วิศวกรรมคอมพิวเตอร์ \\
+คณะ & วิศวกรรมศาสตร์ \\
+ปีการศึกษา & 2568 \\
+\end{tabular}
+\end{flushleft}
+
+\begin{center}
+\textbf{บทคัดย่อ}
+\end{center}
+
+โครงงาน "แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI" มีแรงจูงใจมาจากข้อเท็จจริงที่ว่า ในปัจจุบันแทบทุกคนมีคอมพิวเตอร์และหลีกเลี่ยงไม่ได้ที่จะต้องสร้างหรือจัดการ "ไฟล์" ต่าง ๆ ซึ่งจำนวนไฟล์เหล่านี้มีปริมาณมาก ทำให้การจัดการไฟล์กลายเป็นเรื่องยุ่งยาก ตัวโครงงานจึงมุ่งแก้ไขปัญหาที่พบได้บ่อยนี้ โดยการพัฒนาแอปพลิเคชันเดสก์ท็อปที่สามารถอ่านและเข้าใจเนื้อหาของไฟล์ได้โดยอัตโนมัติ เพื่อที่จัดระเบียบไฟล์ที่ได้รับเข้ามาใหม่อย่างมีความแม่นยำมากขึ้น วัตถุประสงค์ของโครงงานคือการช่วยเหลือผู้ใช้ในการลดภาระจากการจัดการไฟล์ด้วยตนเอง โดยมีการผสานความสามารถของ AI เพื่อดำเนินงานขั้นสูงซึ่งช่วยวางรากฐานสำหรับระบบเชิง Agentic ที่เกี่ยวข้องกับการจัดการไฟล์ เช่น การสรุปเนื้อหา การจดบันทึก การค้นหา หรือการบันทึกลงปฏิทิน ทั้งหมดนี้จะทำงานภายในเครื่องแบบ Local เพื่อความสะดวกและความง่ายในการใช้งานของผู้ใช้ หลังจากได้พัฒนาตัวโปรแกรมเสร็จสิ้นแล้ว ผู้จัดทำได้ทำการประเมินประสิทธิภาพของ "แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI" ด้วยแบบประเมินประสิทธิภาพโดยผู้เชี่ยวชาญ ซึ่งผลลัพธ์คือ ภาพรวมตัวแอปพลิเคชันอยู่ในระดับที่แก้ไขปัญหาได้อย่างมีประสิทธิภาพ อาจปรับปรุงเล็กน้อยได้ (ค่าเฉลี่ยเท่ากับ 4.31) ค่าเบี่ยงเบนมาตรฐานมีค่าเท่ากับ 0.19 หมายความว่า มีการกระจ่ายตัวจากค่าเฉลี่ยต่ำ หรือก็คือ ผู้เชี่ยวชาญมีความคิดเห็นเกี่ยวกับประสิทธิภาพของแอปพลิเคชันใกล้เคียงและสอดคล้องกัน ทั้งนี้ยังให้ความคิดเห็นโดยรวมเกี่ยวกับ "แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI" ว่า แอปพลิเคชันนี้มีคุณค่าทางวิชาการและสามารถนำไปใช้งานจริงได้ สามารถพัฒนาต่อยอดเป็น Open Source Project ตัวแอปพลิเคชันมีพื้นฐานที่ดีมากและพร้อมใช้งานสำหรับ personal use หรือ small team
+
+\vspace{1em}
+\begin{flushleft}
+\begin{tabular*}{\textwidth}{@{}lp{0.8\textwidth}}
+\textbf{คำสำคัญ}: & แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI / การจัดการไฟล์ / การจำแนกเอกสาร / Local LLM / RAG
+\end{tabular*}
+\end{flushleft}
+}
+
+\clearpage
+\chapter*{ACKNOWLEDGMENTS}\addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
+This project would not have been possible with the support of many people. Firstly, we would like to express our sincere gratitude to our advisor, Suthathip Maneewongvatana, Ph.D., for her guidance, time, and support throughout this project. We would also like to thank every committee member who gives us valuable insights and feedback alongside our advisor throughout the entire semester, which is crucial to the development and success of this project.
+
+\noindent A special thanks goes to three experts, Saenguthai Mortho, Asst. Ph.D., Mr. Sonthaya Kueakhiri and Mr. Theerawat NaNakhon, who give their time and expertise to us for the Expert Evaluation form and its feedback.
+
+\noindent Lastly, we would like to thank everyone involved in the making of this project including those who cheer us on for their constant support and encouragement. Thank you from the bottom of our heart.
+
+\clearpage\tableofcontents
+\clearpage\listoftables
+\clearpage\listoffigures
+
+\clearpage\pagenumbering{arabic}
+\chapter{Introduction}
+\section{Motivation}
+At present, as the world enters the information age, technological knowledge has become widespread to all. Almost everyone owns at least one computing device. As a result, the creation and storage of digital data have increased continuously and on a massive scale. Users may have to deal with various types of files, such as documents (pdf, .docx, .txt), images (.png, .jpg), presentations (.pptx), and spreadsheets (.xlsx), which are ones that are widely used and exchanged in daily life. Each user has a different way of organizing files, but a common problem is that they have to move files manually after downloading them. If there are only a few files, this may not be a major issue. However, when the number of files increases, manual file management becomes a repetitive and time-consuming process prone to errors. Leaving files accumulated in the Downloads folder is not an appropriate method. Therefore, we aim to develop an automated file management system that can read and understand file contents, analyze their meaning, and accurately categorize files. The system will use AI capabilities, particularly LLM, to move files to the appropriate destination folders.
+
+\section{Objective}
+\begin{itemize}
+\item To develop a desktop application that helps users manage files efficiently with AI.
+\item To reduce repetitive tasks and errors caused by manual file management.
+\item To improve the convenience of searching and organizing files through customizable file management templates.
+\item To establish a foundation for future expansion toward Agentic AI features, such as file content summarization, note generation, and calendar integration.
+\end{itemize}
+\section{Project Scope}
+The project is a desktop application that automatically manages files by using an LLM to analyze contents and move files to appropriate folders. The system must be able to:
+
+\begin{itemize}
+\item Support reading and analyzing PDF, Word, Excel, PowerPoint, TXT, and image files.
+\item Automatically categorize files and move them to designated folders based on templates.
+\item Provide a Preview system that allows users to review the actions before approval.
+\item Record operation history and support Undo/Redo for every change.
+\item Provide a user-friendly and secure UI, running on Windows.
+\end{itemize}
+\chapter{Background, Theories, and Related Research}
+\section{Related Theories}
+\subsection{Natural Language Processing (NLP)}
+Natural Language Processing, or NLP, is a field of artificial intelligence concerned with enabling computers to understand, analyze, and generate human-like language. NLP has various applications, such as text classification, information extraction, and summarization. In this project, NLP is applied to analyze and classify document files based on the content contained within each file.
+
+\subsection{Large Language Models (LLM)}
+Large Language Models, or LLMs, are large-scale language models trained on massive datasets to process and generate text in a way that is similar to human language. Examples of LLMs include GPT, Llama, Gemma, and others. The main strength of LLMs is their ability to understand textual context and generate complex outputs, such as document classification, text summarization, or generating new file names based on specified conditions. In this project, the LLM is used and controlled through prompt-based instructions.
+
+\subsection{Vision Language Models (VLM)}
+Vision Language Models, or VLMs, are AI systems created by combining Large Language Models with vision encoders, allowing LLMs to ``see'' and understand visual information. With this capability, VLMs can process and provide advanced understanding of videos, images, and text inputs provided in prompts in order to generate text-based responses.
+
+Unlike traditional Computer Vision models, VLMs are not limited to fixed classes or specific tasks such as classification or object detection. VLMs trained on large-scale text corpora and image/video-caption pairs can be instructed using natural language and applied to many classical vision tasks, as well as new generative AI tasks such as visual summarization and answering visual question.
+
+\subsection{Embedding Models}
+Embedding Models are AI models used to convert unstructured data, such as text, images, or documents, into numerical vector representations. These vectors capture the semantic meaning of the original data, allowing computers to compare, search, and analyze information based on meaning rather than exact keyword matching. For example, two documents that use different words but discuss similar topics may have similar vector representations. This makes embedding models useful for tasks such as semantic search, document similarity comparison, file recommendation, duplicate detection, and automatic file categorization.
+
+\subsection{GGUF model}
+.gguf AI model is a compressed model file format commonly used to run LLMs locally with tools such as llama.cpp. It stores model weights, tokenizer data, and metadata in one file, making it easy to load and use offline. GGUF also supports quantization, which reduces model size and memory usage, allowing AI models to run on normal computers with limited hardware. In this case, GGUF models are useful because they allow the system to analyze, classify, summarize, and rename files locally without sending user data to cloud services. This improves privacy and supports offline AI processing.
+
+\subsection{Vector Database}
+A Vector Database is a specialized database designed to store, manage, and search data in the form of high-dimensional vectors. These vectors can capture the conceptual meaning of unstructured data, such as text, images, or audio. Instead of relying only on exact keyword matching like traditional databases, a vector database focuses on semantic similarity search. This allows the system to efficiently retrieve information that is meaningfully related to a query.
+
+\subsection{Retrieval-Augmented Generation (RAG)}
+Retrieval-Augmented Generation, or RAG, is a technique or process used to improve the accuracy and reliability of LLMs by retrieving additional information from trusted external sources beyond the model's training data before generating a final response. RAG is commonly used together with vector databases, which store information in numerical vector forms that AI systems can understand and retrieve efficiently.
+
+\subsection{Prompt Engineering}
+Prompt Engineering is the process of designing instruction text that is sent to an LLM in order to control the output and make it follow the desired format. For example, prompts can instruct an LLM to respond in JSON format or use few-shot examples so that the model can learn the expected pattern from sample inputs and outputs. This technique allows existing models to be used without additional fine-tuning. It is suitable for this project because the system requires accurate and clearly structured outputs, also known as structured output.
+
+\subsection{Hybrid Search}
+Hybrid Search is a search approach that combines two or more search techniques to produce more accurate and relevant results. In general, it combines keyword search, which focuses on exact word matching, with semantic search, which understands the context and meaning of text. This approach allows the system to search based on both exact words and related concepts. It can be used to help users find files more effectively by supporting various types of search queries according to user needs.
+
+\subsection{AI Agents}
+An AI Agent is a system that uses an LLM to control tasks on behalf of users. It can make decisions and perform actions automatically under defined conditions. The main strength of an AI Agent is its ability to select appropriate tools, such as calling APIs or accessing databases, and perform repetitive tasks efficiently.
+
+The main components of an AI Agent include Model, Tools, and Instructions. The Model is responsible for reasoning and decision-making, Tools are used to access information or perform actions, and Instructions define the behavior of the Agent to ensure that it operates according to the intended requirements.
+
+\section{Related Computer Technologies}
+\subsection{Desktop applications}
+A desktop application is a software program installed and run directly on a personal computer or laptop, such as on Windows, macOS, or Linux, to perform specific tasks without always requiring a web browser.
+
+\subsection{Tauri}
+Tauri is a framework for developing lightweight desktop applications that can run on both Windows and macOS. It uses web technologies such as HTML, CSS, and JavaScript/TypeScript to build the user interface, while Rust is used as the backend to connect with the file system and native APIs of the operating system. Tauri is suitable for applications that require speed, security, and a small application size.
+
+\subsection{React + TypeScript}
+React and TypeScript are used to develop the user interface of the application. React provides efficient state management. TypeScript improves code reliability by adding static type checking, which helps reduce development errors and makes the application easier to maintain.
+
+\subsection{Rust / Python}
+Rust is used to interact with the file system, manage batch processing, and handle tasks that require high performance and memory safety.
+
+Python is used for AI-related processing, including running AI models and LLMs tasks. It is suitable for text processing, document analysis, file content extraction, and integration with machine learning libraries.
+
+\subsection{llama.ccp}
+llama.cpp is an open-source C/C++ project used to run Large Language Models locally on a computer. Its main goal is to enable LLM inference with minimal setup and good performance across different hardware.
+
+It is commonly used with GGUF models, which are model files optimized for local inference. With llama.cpp, users can run AI models without relying on cloud services, making them suitable for offline and privacy-focused applications. Hugging Face also documents GGUF usage with llama.cpp for downloading and running compatible models.
+
+\section{Related Research}
+\subsection{Auto Organizer: A Machine Learning-Based Tool for Automatic Organization of          Files}
+Sengar, Fatima, and Yadav proposed Auto Organizer, a machine learning-based tool for automatically organizing files on a digital device. The system was designed to solve the common problem of users having large numbers of downloaded or created files, which makes it difficult to locate specific files later. The proposed tool supports multiple file types, including PDF files, documents, images, and audio files. It applies different deep learning algorithms to classify files into predefined categories, with a total of twenty classification categories included in the system. In addition to file classification, the tool provides practical features such as directory sorting, file name recommendation, and file save path recommendation through a user-friendly graphical interface.
+
+Relevance to the project :  The basic of paper is very similar to the project ``AI-powered file organizer application'', it may have some differences, but it is solid evidence that the solution to use AI models as a classifier to file organization problem is appropriate. In another sense, project ``AI-powered file organizer application'' is an extension and an upgrade to this paper with use of more advanced LLM models instead of simple fine-tuned machine learning.
+
+\subsection{Semantic File Systems}
+Gifford et al. introduced the Semantic File System, a file management approach that provides associative access to files by automatically extracting attributes from file contents using file-type-specific transducers. Unlike traditional hierarchical file systems, which require users to remember exact folder locations, semantic file systems allow users to locate files based on meaningful attributes such as author, title, file type, text content, or program functions. The system also introduces virtual directories, where directory names are interpreted as queries and the results are displayed like normal folders. This design allows semantic access to remain compatible with existing file system tools and protocols. The study shows that semantic file systems can improve information retrieval and provide a more flexible storage abstraction than conventional tree-structured file systems. This research is relevant to the proposed automatic file organizer because it demonstrates the importance of content-based analysis, automatic indexing, and semantic metadata extraction for improving file discovery and organization.
+
+Relevance to the project : To project ``AI-powered file organizer application'', this paper can support the idea that file organization should not depend only on folder hierarchy or file extension. The paper provides an early theoretical and practical foundation for automatically extracting file meaning and using that information for retrieval. The project can be positioned as a modern extension of this idea by using machine learning, OCR, embeddings, or LLM-based summarization to classify and organize files automatically.
+
+\chapter{Methodology}
+\section{Project Details}
+This project aims to develop a desktop application that uses an LLM to automatically read, analyze, and categorize document files such as .pdf, .docx, .pptx, .xlsx and image files. The system needs to help reduce the burden of manual file management, such as moving files, renaming files, and creating new folders. Users can define their own file organization templates and review the results through a Preview screen before confirming the actual operation. The application is also designed with a History/Undo system to ensure that any changes made by the system can be reversed when needed. In addition, the application includes secondary features that apply Agentic AI concepts, such as file summarization, schedule generation, and a note-taking workspace for folders.
+
+\subsection*{System Requirements}
+\begin{itemize}
+\item The system must be able to read and support document files, including .pdf, .docx, .pptx, .xlsx and image files.
+\item The system must be able to use AI to analyze and classify files based on the content.
+\item The system must be able to create destination folder paths.
+\item The system must provide a Preview function that allows users to review the results before confirming the actual operation.
+\item The system must record all operation history and support Undo/Redo.
+\item The system must provide a user-friendly and easy-to-understand UI to improve user convenience.
+\end{itemize}
+\section{System Overview}
+\subsection{Dataflow Diagram (level 0)}
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/figure_1.png}
+\caption{Diagram from the source document}
+\end{figure}
+\subsection{Main sequence Diagram}
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/figure_2.jpg}
+\caption{Diagram from the source document}
+\end{figure}
+\subsection{System Architecture and Organization Design}
+This design is grounded in the Clean Architecture principle, which states that software should be organized into concentric layers where outer layers depend on inner layers, never the reverse. Each layer in the system maps to a specific responsibility:
+
+\begin{longtable}{@{}p{0.16\textwidth}p{0.24\textwidth}p{0.52\textwidth}@{}}
+\caption{Table 2: System architecture layers and responsibilities}\\
+\toprule
+Layer & Component & Responsibility \\
+\midrule
+UI & React/TypeScript & Render state and capture user intent \\
+IPC & Tauri invoke() & Serialize and transmit commands across the process boundary \\
+IPC Handler & Tauri command registration & Deserialize input, validate it, and route it to the appropriate command \\
+Command & Rust command functions & Orchestrate one use case end-to-end \\
+Service & Domain service classes & Encapsulate business logic \\
+Infrastructure & File system, watcher, process manager & Execute side effects against the operating system \\
+Repository & JSON / SQLite persistence & Read and write application state \\
+\bottomrule
+\end{longtable}
+
+In Tauri, the frontend and the backend (Rust) run in separate processes with no shared memory. JavaScript cannot directly access the file system, spawn processes, or interact with the operating system. All cross-boundary calls must pass through the IPC channel (invoke()), which Tauri validates against a declared capability manifest before executing. This separation naturally enforces the Separation of Concerns principle: the UI layer contains no file-system logic, and the repository layer contains no rendering logic. If the storage format changes from JSON to SQLite, only the repository layer needs to change; the command, service, and UI layers remain unaffected.
+
+Furthermore, separating the Command layer from the Service layer allows the same business logic to be reused across multiple entry points, such as a manual user action, an automated watcher trigger, or a future scheduled task, without duplicating code.
+
+The organization feature is the core workflow of this project. Its design addresses three fundamental challenges: files may arrive one at a time or in large batches, AI analysis is slow and non-deterministic, and file moves are irreversible so user confirmation is required before any destructive action.
+
+The full pipeline is divided into four phases:
+
+\textbf{Phase 1: File Discovery}
+
+Files enter the organize pipeline through two mutually exclusive triggers. Manual selection starts when the user initiates a native file picker dialog through the UI. The Rust command opens the operating system's native dialog using the rfd library and returns the selected paths to the frontend. Automatic detection is used when the user has configured a watched folder. The backend registers a file system watcher using the notify crate, then applies debounce and stability checks before emitting a watched-file-added event to the frontend.
+
+\textbf{Phase 2: Frontend Queue Architecture}
+
+When files arrive, the frontend inserts each file path into a sequential analysis queue managed in the Zustand store. This queue acts as load leveling between the producer and the slow AI worker, prevents resource contention, preserves FIFO order, and allows the UI to render progress accurately.
+
+\textbf{Phase 3: AI Analysis}
+
+For each file dequeued, the frontend sends an HTTP POST request to the backend service, which runs as a separate Python process. This keeps the AI pipeline isolated from the UI, allows crashes to be handled independently, and makes future remote deployment possible without changing the frontend contract.
+
+\textbf{Phase 4: User Confirmation and File Execution}
+
+After analysis, the frontend shows ranked category suggestions, filename suggestions, and the original file path. File moves are only executed after user confirmation. The Tauri Rust backend performs the file-system operation, and the frontend records the original and new paths in the local history store so the undo flow can reverse the action later.
+
+\subsection{Frontend}
+The project is built with Tauri + React. The frontend provides a desktop UI for analyzing dropped files, suggesting categories and names, tracking organization history, and managing settings through a single cohesive interface.
+
+\subsection*{Core development}
+\begin{itemize}
+\item File Analysis and Intake: Drag-and-drop and file picker mechanisms for capturing files into the organization pipeline
+\item Interface for AI models: LLM Models configuration set up
+\item Historical Tracking: Comprehensive logging and searchable repository of organization activities
+\item Settings and Configuration: User-accessible controls for category management, folder configuration, and automation policies
+\item Authentication Integration: Google Calendar API access
+\item Background Automation: Real-time monitoring and queued file processing with concurrency control
+\end{itemize}
+\begin{longtable}{@{}p{0.22\textwidth}p{0.20\textwidth}p{0.48\textwidth}@{}}
+\caption{Table 1: Tools and Technology implementation in frontend}\\
+\toprule
+Component & Technology & Rationale \\
+\midrule
+UI Framework & React & Modern concurrent rendering with automatic batching \\
+Language & TypeScript & Compile-time type safety and IDE support \\
+Build Tool & Vite & Rapid build times and optimized production bundles \\
+Routing & React Router & Client-side navigation with protected route patterns \\
+State Management & Zustand & Minimalist API with built-in persistence middleware \\
+Component Library & shadcn/ui & Accessible, customizable Radix UI components \\
+Styling & Tailwind CSS & Utility-first CSS with CSS variable theme support \\
+Icons & Lucide React & Lightweight SVG icon library \\
+Desktop Runtime & Tauri & Native desktop integration with Rust backend \\
+Date Handling & date-fns & Functional, modular date manipulation library \\
+Data Visualization & recharts & React-based charting library for metrics display \\
+Notifications & Sonner & Toast notification system for user feedback \\
+Package Manager & Bun & Fast JavaScript runtime and package manager \\
+\bottomrule
+\end{longtable}
+
+\subsection{Backend}
+This project is a privacy-first local file organization system that assists users in categorizing and organizing files based on semantic understanding of file content. The system operates as a desktop application, processing files from absolute paths without uploading or transmitting content outside the local system boundary.
+
+\subsection*{Core development}
+\begin{itemize}
+\item Scanner Service: Enumerates files from specified directory paths and extracts file metadata: path, size, content hash (SHA-256), extension
+\item Classification: Computes cosine similarity between file embeddings and category embeddings
+\item RAG Service: A retrieval-augmented generation. Manages the embedding function pipeline, delegating to llama-server. Supporting semantic search
+\item Parser: Extracts structured text and tables from PDF, DOCX, XLSX, PPTX, HTML, and Markdown files. Supports two profiles ("fast" and "rich") with configurable for normal OCR or table structure extraction
+\item LLM Client: Async HTTP interface to out-of-process llama-server. Essential method for the access of AI. Supporter of the features such as files organization, summary
+\item Database: Cache on activity. Participating in workflow for the purpose of reducing workload and remembering the already processed file
+\end{itemize}
+\begin{longtable}{@{}p{0.20\textwidth}p{0.20\textwidth}p{0.50\textwidth}@{}}
+\caption{Table 3: Tools and technology implementation in backend}\\
+\toprule
+Category & Tool & Purpose \\
+\midrule
+Framework & FastAPI & Web API framework \\
+Database & SQLAlchemy + SQLModel & Object-relational mapping \\
+Migrations & Alembic & Schema versioning \\
+Parsing & Docling & Multi-format document parsing \\
+RAG & RAG-Anything & Semantic indexing \\
+RAG Backend & LightRAG & Vector storage \\
+LLM & llama.cpp & Local LLM inference as llama-server \\
+Vectors & NumPy & Numerical operations \\
+Logging & logging & Structured logging \\
+Config & dataclass + env & Settings management \\
+\bottomrule
+\end{longtable}
+\subsection*{AI models implementation}
+The system must be able to read and support document files, including .pdf, .docx, .pptx, .xlsx and image files. Some file types are easily understood by LLM because they were trained by them, as text base documents, but some like image files (png or .jpeg) cannot be comprehended by normal LLM, and that is the reason why VLM is needed.
+
+With the integration of RAG system and vector database to support semantic search, LLM also need to embedded word from file's content into the vector database which may interfere with its normal process and increasing more time on each session of activity. One of the solutions is to use separate embedding models to handle this job.
+
+This project prioritizes working in local environments, that means special interface is needed. We chose llama.ccp because it requires minimal setup, suitable for offline desktop application.
+
+\subsection*{In summary of this part}
+\begin{itemize}
+\item All models will be of .gguf format for the use with llama.cpp
+\item There will be VLM + mmproj (image encoder support) and embedding model for the best practice
+\end{itemize}
+\subsection*{Workflow}
+The analysis pipeline inside the application applies a cache-first strategy:
+
+\begin{itemize}
+\item \textbf{Scan}: The file hash, size, and extension are computed.
+\item \textbf{Cache check}: A categories hash is computed from the current set of active categories and the parser profile. If the analysis record already exists in the database for this file with a matching hash, the cached analysis is returned immediately and no LLM call is made.
+\item \textbf{Parse}: If the cache misses, the file is parsed using Docling's fast profile to extract text content. The result is a structured summary suitable for LLM input.
+\item \textbf{Summarize}: The extracted text is sent to the llama-server chat endpoint with a summarization prompt. For image files, the vision-capable model endpoint is used instead.
+\item \textbf{Rename suggestion}: The summary is sent to the LLM with a rename prompt that instructs the model to produce filenames. The output is post-processed with sanitization rules to ensure filesystem compatibility.
+\item \textbf{Embedding and classification}: The file summary is embedded using the llama-server embedding endpoint. The resulting vector is compared against the pre-computed embedding of each active category using cosine similarity.
+\item \textbf{Persist}: The analysis result is written to the database and a history entry is created.
+\end{itemize}
+
+So, the basic workflow should be like this:
+
+[Stage 1] Scan Files
+
+\begin{itemize}
+\item Enumerate file paths
+\item Compute file hashes and metadata
+\item Load existing File records from database
+\item Determine which files have changed
+\end{itemize}
+↓
+
+[Stage 2] Cache Check
+
+\begin{itemize}
+\item If unchanged \& categories match → Hit (return cached results)
+\item If categories changed but file unchanged → Partial (re-classify only)
+\item If file changed or forced → Full pipeline
+\end{itemize}
+↓
+
+[Stage 3a: Full pipeline] Parse \& Queue Background Ingestion
+
+\begin{itemize}
+\item Parsing and extracting
+\item Enqueue file into background RAG ingestion
+\end{itemize}
+↓
+
+[Stage 3b] Generate Summary (if not cached)
+
+\begin{itemize}
+\item If image: send to VLM
+\item If text: use extracted text + LLM summary
+\item If neither: filename fallback
+\end{itemize}
+↓
+
+[Stage 4] Generate Rename Suggestions (if summary available)
+
+\begin{itemize}
+\item LLM generates N candidate filenames based on summary
+\item Sanitize and validate suggestions
+\end{itemize}
+↓
+
+[Stage 5] Classify Files
+
+\begin{itemize}
+\item Compute file embedding (filename + summary)
+\item Load active categories with embeddings
+\item Compute cosine similarity for each category
+\item Sort by score descending; retain top-K
+\end{itemize}
+↓
+
+[Stage 6] Return Results
+
+\begin{itemize}
+\item Format response with scores, suggestions, metadata
+\item Log history activity
+\end{itemize}
+↓
+
+[Response] (with scores, suggestions, timings)
+
+\section{Evaluation method}
+To conform with objectives of this project which is service invention project in the form of desktop application, the evaluation method must include the Performance testing and End-user opinion. So, in this case there are some of the best ways to which is:
+
+\begin{itemize}
+\item Satisfactory form for end-user: This method is to use form or survey to ask the end-user that we, developer of this project, distribute our application to. The number of participants should not be too low, or the result might be biased and will not express the true performance of the application
+\item Expert Evaluation form: This method is to use form made with technical questions to ask the expert in the field of computer engineering or software developer after we send our application to them to test. The questions must be related to the project objectives, and with an odd number of experts participating, we can also get a consensus on whether the application is successful or not.
+\end{itemize}
+\chapter{Results and Analysis}
+\subsection*{Finished Product}
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/figure_3.png}
+\caption{Diagram from the source document}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/figure_4.png}
+\caption{Diagram from the source document}
+\end{figure}
+The project ``AI-powered file organizer application'' was conducted according to the following steps:
+
+\begin{itemize}
+\item Studying project-related information
+\item Developing a demo application and testing the LLM model
+\item Creating an expert evaluation form for application performance
+\item Collecting data for development and improvement
+\item Analyzing data and summarizing the project results
+\end{itemize}
+\subsection*{Methodology}
+1. Expert Evaluation tool for Application Performance
+
+\section{The Evaluation tool used to evaluate the application was a performance evaluation form, divided into two sections:}
+Part 1: Performance evaluation of the ``AI-powered file organizer application'' by experts. The project developers defined a 5-point scoring scale with the following meanings:
+
+\begin{itemize}
+\item : unable to solve the problem.
+\item : able to solve the problem partially, but some gaps remain.
+\item : able to solve the problem appropriately, but further improvement is still possible
+\item : able to solve the problem effectively with minor improvements possible.
+\item : able to solve the problem completely and appropriately.
+\end{itemize}
+Part 2: Additional comments and suggestions on the performance evaluation of the ``AI-powered file organizer application''
+
+\section{The data analysis in this project was conducted using computer software packages. The statistics used for analysis were as follows:}
+Data from the performance evaluation form of the ``AI-powered file organizer application'' were analyzed using the mean ( X ) and standard deviation ( S.D. ). The interpretation of the mean scores was defined as follows (Boonchom Srisa-ard, 2002: 162):
+
+Mean score between 4.51 -- 5.00 means able to solve the problem completely and appropriately.
+
+Mean score between 3.51 -- 4.50 means able to solve the problem effectively with minor improvements possible.
+
+Mean score between 2.51 -- 3.50 means able to solve the problem appropriately, but further improvement is still possible.
+
+Mean score between 1.51 -- 2.50 means able to solve the problem partially, but some gaps remain.
+
+Mean score between 1.00 -- 1.50 means unable to solve the problem.
+
+\subsection*{Data Analysis}
+The project developers analyzed data from the expert performance evaluation form for the ``AI-powered file organizer application''. The evaluation was conducted by 3 experts. The analysis results were presented in tables together with descriptive explanations and divided into two parts as follows:
+
+Part 1: Analysis results of the expert performance evaluation of the ``AI-powered file organizer application''. The analysis used the mean and standard deviation, both overall and by individual evaluation items. To make the data analysis easier to understand, the developer defined the statistical symbols and abbreviations used in the study as follows:
+
+n refers to the sample size.X refers to the mean score of satisfaction.( S.D. ) refers to the standard deviation.
+
+Part 2: Additional comments and suggestions on the performance evaluation of the ``AI-powered file organizer application''.
+
+\subsection*{Data Analysis Results}
+Part 1: Analysis results of the expert performance evaluation of the ``AI-powered file organizer application'' using the mean and standard deviation, both overall and by individual evaluation items.
+
+\begin{longtable}{@{}p{0.52\textwidth}p{0.12\textwidth}p{0.12\textwidth}p{0.16\textwidth}@{}}
+\caption{Table 2: Mean, standard deviation, and analysis of expert opinions regarding the performance of the ``AI-powered file organizer application''}\\
+\toprule
+Evaluation Items & Result &  &  \\
+\midrule
+ & X & SD & Interpretation \\
+1. The system can accurately read and analyze data from PDF, Word, Excel, PowerPoint, TXT, and image files. & 4.33 & 0.57 & ( 4 ) \\
+2. The system can accurately and appropriately categorize files based on their content. & 3.66 & 0.47 & ( 4 ) \\
+3. The system can accurately and appropriately move files to destination folders according to defined templates. & 5 & 0 & ( 5 ) \\
+4. The Preview system effectively helps reduce errors before moving or modifying files. & 5 & 0 & ( 5 ) \\
+5. The history recording and Undo/Redo system is appropriate for practical use. & 4 & 0 & ( 4 ) \\
+6. The UI design is easy to learn and use. & 3.51 & 0.47 & ( 4 ) \\
+7. AI-related features, such as content summarization, note generation, and search are appropriate for practical use. & 4 & 0 & ( 4 ) \\
+8. The system provides appropriate measures to prevent risks to user data. & 5 & 0 & ( 5 ) \\
+9. The overall system architecture is appropriate for development as a desktop application. & 4 & 0 & ( 4 ) \\
+10. The system has the potential to support real-world use on Windows. & 4.66 & 0.47 & ( 5 ) \\
+Total & 4.31 & 0.19 & ( 4 ) \\
+\bottomrule
+\end{longtable}
+
+From Table 2, it was found that the experts' opinions regarding the performance of the ``AI-powered file organizer application'' were overall at the level of able to solve the problem effectively with minor improvements possible, with a mean score of 4.31. The standard deviation was 0.19, indicating a low level of dispersion from the mean. This means that the experts' opinions regarding the application's performance were similar and consistent. And when considering each evaluation item individually, four items were rated at the level of able to solve the problem completely and appropriately. These items were: The system can accurately and appropriately move files to destination folders according to defined templates, The Preview system effectively helps reduce errors before moving or modifying files, The system provides appropriate measures to prevent risks to user data, The system has the potential to support real-world use on Windows. The remaining evaluation items were rated at the level of able to solve the problem effectively with minor improvements possible.
+
+Part 2: Additional Comments and Suggestions on the Performance Evaluation of the ``AI-powered file organizer application''
+
+Expert ``1'' evaluated that this application is of very good quality. This reflects a clear understanding of applying a Local LLM to solve real-world problems. The application has several strengths, including:
+
+\subsection*{Strengths}
+\begin{itemize}
+\item Use of Offline AI (llama.ccp) -- This is an important strength, especially for organizations that require privacy and do not want to rely on cloud services.
+\item Preview \& Undo System -- This is very well designed and helps reduce the risk of incorrect file organization. It also provides good user experience.
+\item Full Thai Language Support -- The system supports Thai documents, showing attention to the local context.
+\item Hybrid Approach (Keyword + AI) -- Using keyword matching first and then sending the task to AI is a good concept. It helps save time and computational resources.
+\end{itemize}
+\subsection*{Areas for Improvement}
+\begin{itemize}
+\item UI/UX -- Although the application is usable, it is recommended to further study Material Design or Fluent Design, and Dark Mode may also be considered.
+\item Error Handling -- Error handling should be clearer. For example, if AI models are not running or some process fails, the system should display easy-to-understand messages.
+\item Documentation -- A complete user manual should be provided, including a troubleshooting guide.
+\end{itemize}
+\subsection*{Additional Suggestions}
+\begin{itemize}
+\item Consider adding an adjustable Confidence Score Threshold for users, such as asking the user for confirmation if the AI confidence score is lower than 70\%.
+\item Add a Batch Rename feature to rename files according to a predefined format.
+\item Develop an Analytics Dashboard to display file organization statistics, such as the number of files in each category and total file size.
+\end{itemize}
+\subsection*{Overall Comment}
+This application has academic value and can be applied in real-world use. It is recommended that the project be further developed as an Open-Source Project. The developers may also consider publishing a paper on the Hybrid Keyword-AI Approach for Thai-language documents.
+
+Expert ``2'' evaluated that this ``AI-powered file organizer application'' is highly outstanding and useful, especially in educational and real-world working contexts.
+
+\subsection*{Strengths}
+\begin{itemize}
+\item Practical Usability -- This is not only a sample project, but an application that can be immediately used to solve real problems in offices or government agencies, where large numbers of documents often need to be organized.
+\item Thai document parsing -- This is a major strength because most government documents are in Thai and often include scanned documents that require OCR. The ability to support Thai language well makes the application practical for real use.
+\item 100\% Offline Operation -- This is very important for organizations that handle sensitive information, as they do not need to worry about data security risks from cloud services.
+\item Preview and Undo Features -- Students often develop projects without considering these features, but this project clearly takes real users into account.
+\end{itemize}
+\subsection*{Application in Teaching}
+This project is a very good example for students to learn from in the following areas:
+
+\begin{itemize}
+\item Machine Learning Integration -- It demonstrates integration with the AI models.
+\item File Handling -- It involves managing multiple file formats.
+\item Real-World Problem Solving -- It solves a real problem rather than simply following a basic example.
+\end{itemize}
+\subsection*{Areas for Improvement}
+\begin{itemize}
+\item Create Tutorial Videos -- Tutorial videos should be created to help general users understand how to use the application more quickly, especially users who are not familiar with technology.
+\item Improve the UI for Easier Use -- Although the application is already usable, it should include a wizard or guided setup for first-time users.
+\item Add Use Case Examples -- Preset templates should be provided, such as ``organizing human resources documents'' or ``organizing financial documents.''
+\end{itemize}
+\subsection*{Additional Suggestions}
+\begin{itemize}
+\item Consider adding multi-language support, starting with Thai and English, which has already been implemented, and possibly adding more languages in the future.
+\item Add Export/Import Settings so that users can share templates with their colleagues.
+\item Develop a Lite Version for low-specification computers, which may use only keyword matching without AI.
+\end{itemize}
+\subsection*{Overall Comment}
+This ``AI-powered file organizer application'' is highly suitable for presentation at an academic conference. It should also be considered for release as an Open-Source Project so that the community can benefit from it. This would also help build recognition for the institution and the developers.
+
+Expert ``3'' evaluated this application from the perspective of real-world organizational use and data security.
+
+\subsection*{Strengths}
+\begin{itemize}
+\item Offline-first Architecture -- Data does not leave the user's device, making it suitable for organizations that handle sensitive information.
+\item Local AI Processing -- This helps reduce the risk of data breaches.
+\item Password-protected File Support -- The application takes data security into consideration.
+\item System Architecture -- The code structure is well organized, and the installer is ready for use.
+\end{itemize}
+\subsection*{Areas for Improvement for Enterprise Deployment}
+\begin{itemize}
+\item Security and Access Control -- User authentication and role-based access control should be added for organizational use.
+\item Audit Trail -- Logs should include more details, such as User ID, IP address, and file hash for integrity checking.
+\item Scalability -- A database such as SQLite should be considered instead of JSON files when handling a large number of files.
+\item Network Deployment -- A client-server architecture should be developed to allow multiple users to work together more conveniently.
+\item Backup and Recovery -- Auto-backup mechanisms for configuration and export/import settings should be provided.
+\end{itemize}
+\subsection*{Additional Suggestions}
+\begin{itemize}
+\item Consider Active Directory integration for organizations using a Windows Domain.
+\item Add API endpoints so that other systems can access and use the application.
+\item Develop a Health Check Dashboard for IT administrators to monitor system status.
+\item Add unit tests for critical functions.
+\end{itemize}
+\subsection*{Summary}
+The application has a very strong foundation and is ready for personal use or small teams. However, if it is intended for use in large organizations, additional enterprise features should be developed according to the suggestions above. The use of Offline AI is an important strength in the on-premises solution market.
+
+\chapter{Conclusion and Recommendations}
+The project titled ``AI-powered file organizer application'' can be summarized, discussed, and presented with recommendations as follows:
+
+\subsection*{Project Summary}
+\subsection*{Project Objectives}
+\begin{itemize}
+\item To develop a desktop application that helps users manage files efficiently with AI.
+\item To reduce repetitive tasks and errors caused by manual file management.
+\item To improve the convenience of searching and organizing files through customizable file management templates.
+\item To establish a foundation for future expansion toward Agentic AI features, such as file content summarization, note generation, and calendar integration.
+\end{itemize}
+\subsection*{Methodology}
+1. Expert Evaluation tool for Application Performance
+
+\section{The Evaluation tool used to evaluate the application was a performance evaluation form, divided into two sections:}
+Part 1: Performance evaluation of the ``AI-powered file organizer application'' by experts. The project developers defined a 5-point scoring scale with the following meanings:
+
+\begin{itemize}
+\item means unable to solve the problem.
+\item means able to solve the problem partially, but some gaps remain.
+\item means able to solve the problem appropriately, but further improvement is still possible
+\item means able to solve the problem effectively with minor improvements possible.
+\item means able to solve the problem completely and appropriately.
+\end{itemize}
+Part 2: Additional comments and suggestions on the performance evaluation of the ``AI-powered file organizer application''
+
+\section{The data analysis in this project was conducted using computer software packages. The statistics used for analysis were as follows:}
+Data from the performance evaluation form of the ``AI-powered file organizer application'' were analyzed using the mean ( X ) and standard deviation ( S.D. ). The interpretation of the mean scores was defined as follows (Boonchom Srisa-ard, 2002: 162):
+
+Mean score between 4.51 -- 5.00 means able to solve the problem completely and appropriately.
+
+Mean score between 3.51 -- 4.50 means able to solve the problem effectively with minor improvements possible.
+
+Mean score between 2.51 -- 3.50 means able to solve the problem appropriately, but further improvement is still possible.
+
+Mean score between 1.51 -- 2.50 means able to solve the problem partially, but some gaps remain.
+
+Mean score between 1.00 -- 1.50 means unable to solve the problem.
+
+The result from the Expert Evaluation from stated that the experts' opinions regarding the performance of the ``AI-powered file organizer application'' were overall at the level of able to solve the problem effectively with minor improvements possible, with a mean score of 4.31. The standard deviation was 0.19, indicating a low level of dispersion from the mean. This means that the experts' opinions regarding the application's performance were similar and consistent. And when considering each evaluation item individually, four items were rated at the level of able to solve the problem completely and appropriately. These items were: The system can accurately and appropriately move files to destination folders according to defined templates, The Preview system effectively helps reduce errors before moving or modifying files, The system provides appropriate measures to prevent risks to user data, The system has the potential to support real-world use on Windows. The remaining evaluation items were rated at the level of able to solve the problem effectively with minor improvements possible.
+
+\subsection*{Summary of Expert Opinions on the Performance Evaluation of the ``AI-powered file organizer application''}
+\begin{itemize}
+\item This application has academic value and can be applied in real-world use. It is recommended that the project be further developed as an Open-Source Project. The developers may also consider publishing a paper on the Hybrid Keyword-AI Approach for Thai-language documents.
+\item This ``AI-powered file organizer application'' is highly suitable for presentation at an academic conference. It should also be considered for release as an Open-Source Project so that the community can benefit from it. This would also help build recognition for the institution and the developers.
+\item The application has a very strong foundation and is ready for personal use or small teams. However, if it is intended for use in large organizations, additional enterprise features should be developed according to the suggestions above. The use of Offline AI is an important strength in the on-premises solution market.
+\end{itemize}
+\subsection*{Project Recommendations}
+\begin{itemize}
+\item Consider adding an adjustable Confidence Score Threshold, such as asking the user for confirmation if the AI confidence score is lower than 70\%.
+\item Add a Batch Rename feature to rename files according to a predefined format.
+\item Develop an Analytics Dashboard to display file organization statistics, such as the number of files in each category and the total file size.
+\item Consider adding Multi-language Support, starting with Thai and English, which has already been implemented, and possibly adding more languages in the future.
+\item Add Export/Import Settings so that users can share templates with their colleagues.
+\item Develop a Lite Version for low-specification computers, which may use only keyword matching without AI.
+\item Consider Active Directory Integration for organizations using a Windows Domain.
+\item Add API Endpoints so that other systems can access and use the application.
+\item Develop a Health Check Dashboard for IT administrators to monitor system status.
+\item Add Unit Tests for critical functions.
+\end{itemize}
+\chapter*{REFERENCES}\addcontentsline{toc}{chapter}{REFERENCES}
+\begin{longtable}{@{}p{0.24\textwidth}p{0.68\textwidth}@{}}
+\toprule
+{[1]} & Information for AI\newline \url{https://aws.amazon.com/th/what-is/nlp/}\newline \url{https://aws.amazon.com/th/what-is/large-language-model/}\newline \url{https://www.nvidia.com/en-us/glossary/vision-language-models/}\newline \url{https://aws.amazon.com/th/what-is/retrieval-augmented-generation/} \\
+\midrule
+{[2]} & LLM \& VLM market\newline \url{https://ollama.com/}\newline \url{https://huggingface.co/} \\
+{[3]} & RAG anything\newline \url{https://arxiv.org/abs/2510.12323}\newline \url{https://github.com/HKUDS/RAG-Anything} \\
+{[4]} & LightRAG\newline \url{https://github.com/HKUDS/LightRAG} \\
+{[5]} & Python computer language\newline \url{https://www.python.org/doc/} \\
+{[6]} & Rust computer language\newline \url{https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/documentation.html} \\
+{[7]} & Tuari framework\newline \url{https://v2.tauri.app/start/} \\
+{[8]} & Semantic File System paper\newline \url{https://pages.cs.wisc.edu/~remzi/Classes/838/Fall2001/Papers/sfs-sosp91.pdf?utm_source=chatgpt.com} \\
+{[9]} & Auto Organizer: A Machine Learning-Based Tool for Automatic Organization of          Files\newline \url{https://www.researchgate.net/publication/371930502_Auto_Organizer_A_Machine_Learning-Based_Tool_for_Automatic_Organization_of_Files} \\
+{[10]} & Llama.ccp\newline \url{https://github.com/ggml-org/llama.cpp} \\
+\bottomrule
+\end{longtable}
+
+\appendix
+\chapter{Experts' form}
+\end{document}
