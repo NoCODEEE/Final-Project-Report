@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.3)  4 MAY 2026 15:40
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.3)  4 MAY 2026 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,35 +687,85 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )) (c:/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
+) (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
+ (c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (c:/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count344
+\calc@Bcount=\count345
+\calc@Adimen=\dimen260
+\calc@Bdimen=\dimen261
+\calc@Askip=\skip76
+\calc@Bskip=\skip77
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count346
+\calc@Cskip=\skip78
+) (c:/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
+\ESO@tempdima=\dimen262
+\ESO@tempdimb=\dimen263
+ (c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+))
+\AM@pagewidth=\dimen264
+\AM@pageheight=\dimen265
+\AM@fboxrule=\dimen266
+ (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/ppxetex.def
+File: ppxetex.def 2026/03/30 v0.6h Pdfpages driver for XeTeX (AM)
+)
+\pdfpages@includegraphics@status=\count347
+\AM@pagebox=\box70
+\AM@global@opts=\toks37
+\AM@pagecnt=\count348
+\AM@toc@title=\toks38
+\AM@lof@heading=\toks39
+\c@AM@survey=\count349
+\AM@templatesizebox=\box71
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 68.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 68.
  (c:/texlive/2026/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -751,39 +801,41 @@ LaTeX Font Info:    ... okay on input line 67.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(c:/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: xetex.def on input line 149.
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 67.
- (./main.out) (./main.out)
+Package hyperref Info: Link coloring ON on input line 68.
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
+ (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
+ (c:/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+))
 File: figures/figure_5.jpg Graphic file (type bmp)
 <figures/figure_5.jpg>
  [1
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 77.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 78.
  (c:/texlive/2026/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Underfull \hbox (badness 10000) in alignment at lines 77--77
+Underfull \hbox (badness 10000) in alignment at lines 78--78
 [] [] 
  []
 
@@ -792,20 +844,20 @@ Underfull \hbox (badness 10000) in alignment at lines 77--77
 Package hyperref Warning: bookmark level for unknown chapterx defaults to 0.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 79.
+(Font)              scaled to size 10.0pt on input line 80.
 
-Underfull \hbox (badness 10000) in alignment at lines 83--85
+Underfull \hbox (badness 10000) in alignment at lines 84--86
 [][] 
  []
 
 [2]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 12.29996pt on input line 92.
+(Font)              scaled to size 12.29996pt on input line 93.
 
-c:/Work/Project/Final-Project-Report/main.tex:92: Font TU/THSarabunNew(0)/m/n/10="TH Sarabun New/OT" at 12.29996pt not loadable: Metric (TFM) file or installed font not found.
+c:/Work/Project/Final-Project-Report/main.tex:93: Font TU/THSarabunNew(0)/m/n/10="TH Sarabun New/OT" at 12.29996pt not loadable: Metric (TFM) file or installed font not found.
 <to be read again> 
                    relax 
-l.92 \thaifont
+l.93 \thaifont
               
 I wasn't able to read the size data for this font,
 so I will ignore the font specification.
@@ -813,7 +865,7 @@ so I will ignore the font specification.
 You might try inserting a different font spec;
 e.g., type `I\font<same font id>=<substitute font name>'.
 
-\thai@year=\count344
+\thai@year=\count350
 Missing character: There is no ห ("E2B) in font nullfont!
 Missing character: There is no ั ("E31) in font nullfont!
 Missing character: There is no ว ("E27) in font nullfont!
@@ -878,7 +930,7 @@ Missing character: There is no ว ("E27) in font nullfont!
 Missing character: There is no ย ("E22) in font nullfont!
 Missing character: There is no A ("41) in font nullfont!
 Missing character: There is no I ("49) in font nullfont!
-\thai@year=\count345
+\thai@year=\count351
 Missing character: There is no ห ("E2B) in font nullfont!
 Missing character: There is no น ("E19) in font nullfont!
 Missing character: There is no ่ ("E48) in font nullfont!
@@ -887,9 +939,9 @@ Missing character: There is no ย ("E22) in font nullfont!
 Missing character: There is no ก ("E01) in font nullfont!
 Missing character: There is no ิ ("E34) in font nullfont!
 Missing character: There is no ต ("E15) in font nullfont!
-\thai@year=\count346
+\thai@year=\count352
 Missing character: There is no 3 ("33) in font nullfont!
-\thai@year=\count347
+\thai@year=\count353
 Missing character: There is no ผ ("E1C) in font nullfont!
 Missing character: There is no ู ("E39) in font nullfont!
 Missing character: There is no ้ ("E49) in font nullfont!
@@ -950,7 +1002,7 @@ Missing character: There is no น ("E19) in font nullfont!
 Missing character: There is no ท ("E17) in font nullfont!
 Missing character: There is no อ ("E2D) in font nullfont!
 Missing character: There is no ง ("E07) in font nullfont!
-\thai@year=\count348
+\thai@year=\count354
 Missing character: There is no อ ("E2D) in font nullfont!
 Missing character: There is no า ("E32) in font nullfont!
 Missing character: There is no จ ("E08) in font nullfont!
@@ -991,7 +1043,7 @@ Missing character: There is no ั ("E31) in font nullfont!
 Missing character: There is no ฒ ("E12) in font nullfont!
 Missing character: There is no น ("E19) in font nullfont!
 Missing character: There is no า ("E32) in font nullfont!
-\thai@year=\count349
+\thai@year=\count355
 Missing character: There is no ห ("E2B) in font nullfont!
 Missing character: There is no ล ("E25) in font nullfont!
 Missing character: There is no ั ("E31) in font nullfont!
@@ -1019,7 +1071,7 @@ Missing character: There is no ณ ("E13) in font nullfont!
 Missing character: There is no ฑ ("E11) in font nullfont!
 Missing character: There is no ิ ("E34) in font nullfont!
 Missing character: There is no ต ("E15) in font nullfont!
-\thai@year=\count350
+\thai@year=\count356
 Missing character: There is no ส ("E2A) in font nullfont!
 Missing character: There is no า ("E32) in font nullfont!
 Missing character: There is no ข ("E02) in font nullfont!
@@ -1047,7 +1099,7 @@ Missing character: There is no ต ("E15) in font nullfont!
 Missing character: There is no อ ("E2D) in font nullfont!
 Missing character: There is no ร ("E23) in font nullfont!
 Missing character: There is no ์ ("E4C) in font nullfont!
-\thai@year=\count351
+\thai@year=\count357
 Missing character: There is no ภ ("E20) in font nullfont!
 Missing character: There is no า ("E32) in font nullfont!
 Missing character: There is no ค ("E04) in font nullfont!
@@ -1074,7 +1126,7 @@ Missing character: There is no ต ("E15) in font nullfont!
 Missing character: There is no อ ("E2D) in font nullfont!
 Missing character: There is no ร ("E23) in font nullfont!
 Missing character: There is no ์ ("E4C) in font nullfont!
-\thai@year=\count352
+\thai@year=\count358
 Missing character: There is no ค ("E04) in font nullfont!
 Missing character: There is no ณ ("E13) in font nullfont!
 Missing character: There is no ะ ("E30) in font nullfont!
@@ -1092,7 +1144,7 @@ Missing character: There is no ส ("E2A) in font nullfont!
 Missing character: There is no ต ("E15) in font nullfont!
 Missing character: There is no ร ("E23) in font nullfont!
 Missing character: There is no ์ ("E4C) in font nullfont!
-\thai@year=\count353
+\thai@year=\count359
 Missing character: There is no ป ("E1B) in font nullfont!
 Missing character: There is no ี ("E35) in font nullfont!
 Missing character: There is no ก ("E01) in font nullfont!
@@ -1103,12 +1155,12 @@ Missing character: There is no ึ ("E36) in font nullfont!
 Missing character: There is no ก ("E01) in font nullfont!
 Missing character: There is no ษ ("E29) in font nullfont!
 Missing character: There is no า ("E32) in font nullfont!
-\thai@year=\count354
+\thai@year=\count360
 Missing character: There is no 2 ("32) in font nullfont!
 Missing character: There is no 5 ("35) in font nullfont!
 Missing character: There is no 6 ("36) in font nullfont!
 Missing character: There is no 8 ("38) in font nullfont!
-\thai@year=\count355
+\thai@year=\count361
 Missing character: There is no บ ("E1A) in font nullfont!
 Missing character: There is no ท ("E17) in font nullfont!
 Missing character: There is no ค ("E04) in font nullfont!
@@ -2596,7 +2648,7 @@ Missing character: There is no a ("61) in font nullfont!
 Missing character: There is no m ("6D) in font nullfont!
 
 LaTeX Font Warning: Font shape `TU/THSarabunNew(0)/b/n' undefined
-(Font)              using `TU/THSarabunNew(0)/m/n' instead on input line 98.
+(Font)              using `TU/THSarabunNew(0)/m/n' instead on input line 99.
 
 Missing character: There is no ค ("E04) in font nullfont!
 Missing character: There is no ำ ("E33) in font nullfont!
@@ -2689,15 +2741,15 @@ Missing character: There is no R ("52) in font nullfont!
 Missing character: There is no A ("41) in font nullfont!
 Missing character: There is no G ("47) in font nullfont!
 
-Underfull \hbox (badness 10000) in alignment at lines 97--99
+Underfull \hbox (badness 10000) in alignment at lines 98--100
 [][] 
  []
 
 [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 104.
+(Font)              scaled to size 12.0pt on input line 105.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 104.
+(Font)              scaled to size 12.0pt on input line 105.
  [4
 
 ] (./main.toc [5
@@ -2726,10 +2778,10 @@ Package hyperref Warning: bookmark level for unknown chapterxx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 115.
+(hyperref)                removed on input line 116.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 14.0pt on input line 116.
+(Font)              scaled to size 14.0pt on input line 117.
 [1
 
 ]
@@ -2737,10 +2789,10 @@ Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 136.
+(hyperref)                removed on input line 137.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 13.0pt on input line 138.
+(Font)              scaled to size 13.0pt on input line 139.
 [2
 
 ] [3] [4] [5]
@@ -2748,7 +2800,7 @@ Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 203.
+(hyperref)                removed on input line 204.
 
 File: figures/figure_1.png Graphic file (type bmp)
 <figures/figure_1.png>
@@ -2758,22 +2810,22 @@ File: figures/figure_1.png Graphic file (type bmp)
 File: figures/figure_2.jpg Graphic file (type bmp)
 <figures/figure_2.jpg>
 
-Underfull \hbox (badness 1325) in paragraph at lines 237--238
+Underfull \hbox (badness 1325) in paragraph at lines 238--239
 []|\TU/TimesNewRoman(0)/m/n/10 Serialize and transmit commands across the process
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 247--247
+Underfull \hbox (badness 5592) in paragraph at lines 248--248
 []|\TU/TimesNewRoman(0)/m/n/10 JSON / SQLite persis-
  []
 
 
-Overfull \hbox (2.91617pt too wide) in alignment at lines 230--249
+Overfull \hbox (2.91617pt too wide) in alignment at lines 231--250
  [] [] [] 
  []
 
 [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
 []|\TU/TimesNewRoman(0)/m/n/10 SQLAlchemy +
  []
 
@@ -2782,7 +2834,7 @@ Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 456.
+(hyperref)                removed on input line 457.
 
 File: figures/figure_3.png Graphic file (type bmp)
 <figures/figure_3.png>
@@ -2791,7 +2843,7 @@ File: figures/figure_4.png Graphic file (type bmp)
 [13
 
 ]
-Overfull \hbox (1.30957pt too wide) in alignment at lines 515--533
+Overfull \hbox (1.30957pt too wide) in alignment at lines 516--534
  [] [] [] [] 
  []
 
@@ -2800,7 +2852,7 @@ Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 622.
+(hyperref)                removed on input line 623.
 
 [19
 
@@ -2813,13 +2865,129 @@ Package hyperref Warning: bookmark level for unknown apdx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 702.
+(hyperref)                replaced by space on input line 703.
 
-[25]
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 1>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 1>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 1>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 1>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 1>
+[25
+
+]
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 1>
+ [26
+
+]
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 2>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 2>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ1.pdf, page 2>
+ [27
+
+]
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 2>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 2>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 2>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 2>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 2>
+ [28
+
+]
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 1>
+ [29
+
+]
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 2>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 2>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ2.pdf, page 2>
+ [30
+
+]
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 3>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 3>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 3>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 3>
+File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
+<use Word/ประวัติผู้เชี่ยวชาญ.pdf, page 3>
+ [31
+
+]
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 1>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 1>
+ [32
+
+]
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 2>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 2>
+File: Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf Graphic file (type pdf)
+<use Word/แบบประเมิณหาประสิทธิภาพของเครื่องมือ3.pdf, page 2>
+ [33
+
+] [34]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 703.
+(hyperref)                replaced by space on input line 713.
 
 (./main.aux)
  ***********
@@ -2834,12 +3002,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B5BD4EC35A3E1F623EABDE3CD631324A;9838.
  ) 
 Here is how much of TeX's memory you used:
- 19418 strings out of 467992
- 366740 string characters out of 5433178
- 846512 words of memory out of 5000000
- 48046 multiletter control sequences out of 15000+600000
+ 20771 strings out of 467992
+ 390435 string characters out of 5433178
+ 874326 words of memory out of 5000000
+ 49361 multiletter control sequences out of 15000+600000
  630282 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,9n,117p,1601b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,17n,117p,1601b,556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (34 pages, 586748 bytes).
+Output written on main.xdv (43 pages, 593672 bytes).
