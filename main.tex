@@ -1,16 +1,14 @@
 
-\documentclass[12pt,a4paper,oneside]{report}
-\usepackage[a4paper,left=1.5in,right=1in,top=1.2in,bottom=1in]{geometry}
-\usepackage{fontspec}
-\usepackage{ucharclasses}
-\setmainfont{Times New Roman}
-\setsansfont{Angsana New}
-\setmonofont{Courier New}
-\newfontfamily\thaifont{Angsana New}
-\setTransitionTo{Thai}{\thaifont}
-\setTransitionFrom{Thai}{\normalfont}
-\XeTeXlinebreaklocale "th"
-\XeTeXlinebreakskip = 0pt plus 1pt
+\documentclass[12pt,oneside,openright,a4paper]{cpe-english-project}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{thai}
+\newfontfamily\thaifont[Script=Thai,Scale=1.23]{TH Sarabun New}
+\defaultfontfeatures{Mapping=tex-text,Scale=1.0,LetterSpace=0.0}
+\setmainfont[Scale=1.0,LetterSpace=0,WordSpace=1.0,FakeStretch=1.0]{Times New Roman}
+\emergencystretch=10pt
+
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
@@ -19,179 +17,101 @@
 \usepackage{ragged2e}
 \usepackage{enumitem}
 \usepackage{caption}
-\usepackage{tocloft}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage[hidelinks]{hyperref}
 \usepackage{xurl}
-\setlength{\parindent}{0.5in}
-\setlength{\parskip}{0.25em}
-\renewcommand{\baselinestretch}{1.15}
-\setlist[itemize]{leftmargin=0.65in,itemsep=0.1em,topsep=0.2em}
-\titleformat{\chapter}[display]{\normalfont\bfseries\centering}{CHAPTER \thechapter}{0.5em}{\MakeUppercase}
-\titlespacing*{\chapter}{0pt}{-20pt}{24pt}
-\titleformat{\section}{\normalfont\bfseries\large}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\normalfont\bfseries}{\thesubsubsection}{1em}{}
-\captionsetup{font=small,labelfont=bf}
-\renewcommand{\contentsname}{CONTENTS}
-\renewcommand{\listtablename}{LIST OF TABLES}
-\renewcommand{\listfigurename}{LIST OF FIGURES}
-\renewcommand{\bibname}{REFERENCES}
-\setlength{\headheight}{14.5pt}
-\fancyhf{}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\fancypagestyle{plain}{%
-	\fancyhf{}
-	\fancyhead[R]{\thepage}
-	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
-}
-\pagestyle{fancy}
+
+\def\disstitleone{AI-powered file organizer application}
+\def\disstitletwo{}
+\def\dissauthor{Mr. Sarun Khumthai}
+\def\dissauthortwo{Mr. Supakorn Tungpatompramote}
+\def\dissauthorthree{Mr. Puwadech Intong}
+
+\def\dissdegree{Bachelor of Engineering}
+\def\dissdegreeabrev{B.Eng}
+\def\dissyear{2025}
+\def\thaidissyear{2568}
+
+\def\dissadvisor{Suthathip Maneewongvatana, Ph.D.}
+\def\disscoadvisor{}
+\def\disscoadvisortwo{}
+\def\disscoadvisorthree{}
+\def\disscommitteetwo{Name, Title}
+\def\disscommitteethree{Name, Title}
+\def\disscommitteefour{Name, Title}
+
+\def\worktype{Project}
+\def\disscredit{3}
+
+\def\fieldofstudy{Computer Engineering}
+\def\department{Computer Engineering}
+\def\faculty{Engineering}
+
+\def\thaifieldofstudy{วิศวกรรมคอมพิวเตอร์}
+\def\thaidepartment{วิศวกรรมคอมพิวเตอร์}
+\def\thaifaculty{วิศวกรรมศาสตร์}
+
+\def\thaiworktype{ปริญญานิพนธ์}
+\def\thaidisstitleone{แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI}
+\def\thaidisstitletwo{}
+\def\thaidissauthor{นายศรัณย์ คำไทย}
+\def\thaidissauthortwo{นายศุภกร ตั้งปฐมปราโมทย์}
+\def\thaidissauthorthree{นายภูวเดช อินทอง}
+
+\def\thaidissadvisor{ดร. สุธาทิพย์ มณีวงศ์วัฒนา}
+\def\thaidisscoadvisor{}
+\def\thaidisscoadvisortwo{}
+\def\thaidisscoadvisorthree{}
+\def\thaidissdegree{วิศวกรรมศาสตรบัณฑิต}
+
+\linespread{1.15}
+
 \begin{document}
-
-\pagenumbering{gobble}
-\begin{titlepage}
-\centering
-\small
-\begin{figure}[H]\centering
+\pdfstringdefDisableCommands{%
+\let\MakeUppercase\relax
+}
+\begin{center}
 \includegraphics[width=0.2\textwidth]{figures/figure_5.jpg}
-\end{figure}
-{\MakeUppercase{AI-POWERED FILE ORGANIZER APPLICATION}\par}
-\vspace{2in}
-{SARUN KHUMTHAI}\par
-{SUPAKORN TUNGPATOMPRAMOTE}\par
-{PUWADECH INTONG}\par
-\vfill
-{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT\par}
-{OF THE REQUIREMENTS FOR\par}
-{THE DEGREE OF BACHELOR OF ENGINEERING (COMPUTER ENGINEERING)\par}
-{FACULTY OF ENGINEERING\par}
-{KING MONGKUT'S UNIVERSITY OF TECHNOLOGY THONBURI\par}
-{2025\par}
-\end{titlepage}
-
-\clearpage
-\thispagestyle{empty}
-\small
-\begin{center}
-\vspace{0.2in}
-AI-powered file organizer application\\[1in]
-Mr. Sarun Khumthai\\[0.08in]
-Mr. Supakorn Tungpatompramote\\[0.08in]
-Mr. Puwadech Intong\\[0.08in]
-\vspace{1in}
-A Project Submitted in Partial Fulfillment\\
-of the Requirements for\\
-the Degree of Bachelor of Engineering (Computer Engineering)\\
-Faculty of Engineering\\
-King Mongkut's University of Technology Thonburi\\
-2025
 \end{center}
-\vspace{0.35in}
-\noindent Project Committee
-\vspace{0.8cm}
+\vspace*{-1cm}
 
-% Committee signatures: use a consistent two-column table for alignment
-\begin{tabular}{@{}p{0.62\textwidth}p{0.36\textwidth}@{}}
-\dotfill & Project Advisor \\
-\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Suthathip Maneewongvatana, Ph.D.)} & \\
-\\[0.2in]
-\dotfill & Committee Member \\
-\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Name, Title)} & \\
-\\[0.2in]
-\dotfill & Committee Member \\
-\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Name, Title)} & \\
-\\[0.2in]
-\dotfill & Committee Member \\
-\multicolumn{1}{@{}p{0.62\textwidth}@{}}{\centering (Name, Title)} & \\
-\end{tabular}
+\maketitlepage
+\makesignaturepage
 
-\vfill
-\begin{center}
-\bfseries Copyright reserved
-\end{center}
-
-\clearpage
-\pagenumbering{roman}\setcounter{page}{2}
-\begin{flushleft}
-\begin{tabular}{@{}p{0.18\textwidth}p{0.72\textwidth}@{}}
-Project Title & AI-powered file organizer application \\
-Credits & 3 \\
-Member(s) & Mr. Sarun Khumthai \\
- & Mr. Supakorn Tungpatompramote \\
- & Mr. Puwadech Intong \\
-Project Advisor & Suthathip Maneewongvatana, Ph.D. \\
-Program & Bachelor of Engineering \\
-Field of Study & Computer Engineering \\
-Department & Computer Engineering \\
-Faculty & Engineering \\
-Academic Year & 2025 \\
-\end{tabular}
-\end{flushleft}
-
-\begin{center}
-\textbf{Abstract}
-\end{center}
-
+\abstract
 The project, “AI-powered file organizer application”, is motivated by the fact that nowadays almost everyone owns a computer and inevitable to create or handle “files.” The number of them is enormous, managing them can become troublesome. This project is going to address this common problem by developing a desktop application that can automatically read and understand file's content to organize files with more precision. Our objective then is for this solution to assist with and reduce the burden of manual file management. Furthermore, aside from organization, it may also integrate AI to perform more advanced actions which aims to establish a foundation for agentic systems related to file management such as summarization, note taking, searching or calendar taking. Everything must be done locally, bringing greater convenience and ease to users. The performance evaluation of the “AI-powered file organizer application” showed that the overall performance was at the level of effectively solving the problem with minor improvements possible (mean score of 4.31) and standard deviation was 0.19, indicating that the experts’ opinions regarding the application’s performance were similar and consistent. The experts also provided overall comments on the “AI-powered file organizer application”, stating that the application has academic value and can be applied in real-world use. It can be further developed as an Open-Source Project. The application has a very strong foundation and is ready for personal use or small teams.
 
-\vspace{1em}
 \begin{flushleft}
 \begin{tabular*}{\textwidth}{@{}lp{0.8\textwidth}}
 \textbf{Keywords}: & AI-powered file organizer application / File organization / Classification / LLM / RAG
 \end{tabular*}
 \end{flushleft}
+\endabstract
 
-\clearpage
-{\thaifont\normalsize
-\setTransitionTo{Thai}{\thaifont}
-\setTransitionFrom{Thai}{\thaifont}
-\begin{flushleft}
-\begin{tabular}{@{}p{0.22\textwidth}p{0.72\textwidth}@{}}
-หัวข้อปริญญานิพนธ์ & แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI \\
-หน่วยกิต & 3 \\
-ผู้จัดทำ & นายศรัณย์ คำไทย \\
- & นายศุภกร ตั้งปฐมปราโมทย์ \\
- & นายภูวเดช อินทอง \\
-อาจารย์ที่ปรึกษา & ดร. สุธาทิพย์ มณีวงศ์วัฒนา \\
-หลักสูตร & วิศวกรรมศาสตรบัณฑิต \\
-สาขาวิชา & วิศวกรรมคอมพิวเตอร์ \\
-ภาควิชา & วิศวกรรมคอมพิวเตอร์ \\
-คณะ & วิศวกรรมศาสตร์ \\
-ปีการศึกษา & 2568 \\
-\end{tabular}
-\end{flushleft}
-
-\begin{center}
-\textbf{บทคัดย่อ}
-\end{center}
-
+{
+\XeTeXlinebreaklocale "th_TH"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\thaifont
+\thaiabstract
 โครงงาน "แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI" มีแรงจูงใจมาจากข้อเท็จจริงที่ว่า ในปัจจุบันแทบทุกคนมีคอมพิวเตอร์และหลีกเลี่ยงไม่ได้ที่จะต้องสร้างหรือจัดการ "ไฟล์" ต่าง ๆ ซึ่งจำนวนไฟล์เหล่านี้มีปริมาณมาก ทำให้การจัดการไฟล์กลายเป็นเรื่องยุ่งยาก ตัวโครงงานจึงมุ่งแก้ไขปัญหาที่พบได้บ่อยนี้ โดยการพัฒนาแอปพลิเคชันเดสก์ท็อปที่สามารถอ่านและเข้าใจเนื้อหาของไฟล์ได้โดยอัตโนมัติ เพื่อที่จัดระเบียบไฟล์ที่ได้รับเข้ามาใหม่อย่างมีความแม่นยำมากขึ้น วัตถุประสงค์ของโครงงานคือการช่วยเหลือผู้ใช้ในการลดภาระจากการจัดการไฟล์ด้วยตนเอง โดยมีการผสานความสามารถของ AI เพื่อดำเนินงานขั้นสูงซึ่งช่วยวางรากฐานสำหรับระบบเชิง Agentic ที่เกี่ยวข้องกับการจัดการไฟล์ เช่น การสรุปเนื้อหา การจดบันทึก การค้นหา หรือการบันทึกลงปฏิทิน ทั้งหมดนี้จะทำงานภายในเครื่องแบบ Local เพื่อความสะดวกและความง่ายในการใช้งานของผู้ใช้ หลังจากได้พัฒนาตัวโปรแกรมเสร็จสิ้นแล้ว ผู้จัดทำได้ทำการประเมินประสิทธิภาพของ "แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI" ด้วยแบบประเมินประสิทธิภาพโดยผู้เชี่ยวชาญ ซึ่งผลลัพธ์คือ ภาพรวมตัวแอปพลิเคชันอยู่ในระดับที่แก้ไขปัญหาได้อย่างมีประสิทธิภาพ อาจปรับปรุงเล็กน้อยได้ (ค่าเฉลี่ยเท่ากับ 4.31) ค่าเบี่ยงเบนมาตรฐานมีค่าเท่ากับ 0.19 หมายความว่า มีการกระจ่ายตัวจากค่าเฉลี่ยต่ำ หรือก็คือ ผู้เชี่ยวชาญมีความคิดเห็นเกี่ยวกับประสิทธิภาพของแอปพลิเคชันใกล้เคียงและสอดคล้องกัน ทั้งนี้ยังให้ความคิดเห็นโดยรวมเกี่ยวกับ "แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI" ว่า แอปพลิเคชันนี้มีคุณค่าทางวิชาการและสามารถนำไปใช้งานจริงได้ สามารถพัฒนาต่อยอดเป็น Open Source Project ตัวแอปพลิเคชันมีพื้นฐานที่ดีมากและพร้อมใช้งานสำหรับ personal use หรือ small team
 
-\vspace{1em}
 \begin{flushleft}
 \begin{tabular*}{\textwidth}{@{}lp{0.8\textwidth}}
 \textbf{คำสำคัญ}: & แอปพลิเคชันจัดระเบียบไฟล์อย่างอัตโนมัติด้วย AI / การจัดการไฟล์ / การจำแนกเอกสาร / Local LLM / RAG
 \end{tabular*}
 \end{flushleft}
+\endabstract
 }
 
-\clearpage
-\chapter*{ACKNOWLEDGMENTS}\addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
+\preface
 This project would not have been possible with the support of many people. Firstly, we would like to express our sincere gratitude to our advisor, Suthathip Maneewongvatana, Ph.D., for her guidance, time, and support throughout this project. We would also like to thank every committee member who gives us valuable insights and feedback alongside our advisor throughout the entire semester, which is crucial to the development and success of this project.
 
 \noindent A special thanks goes to three experts, Saenguthai Mortho, Asst. Ph.D., Mr. Sonthaya Kueakhiri and Mr. Theerawat NaNakhon, who give their time and expertise to us for the Expert Evaluation form and its feedback.
 
 \noindent Lastly, we would like to thank everyone involved in the making of this project including those who cheer us on for their constant support and encouragement. Thank you from the bottom of our heart.
 
-\clearpage\tableofcontents
-\clearpage\listoftables
-\clearpage\listoffigures
+\tableofcontents
+\listoftables
+\listoffigures
 
-\clearpage\pagenumbering{arabic}
 \chapter{Introduction}
 \section{Motivation}
 At present, as the world enters the information age, technological knowledge has become widespread to all. Almost everyone owns at least one computing device. As a result, the creation and storage of digital data have increased continuously and on a massive scale. Users may have to deal with various types of files, such as documents (pdf, .docx, .txt), images (.png, .jpg), presentations (.pptx), and spreadsheets (.xlsx), which are ones that are widely used and exchanged in daily life. Each user has a different way of organizing files, but a common problem is that they have to move files manually after downloading them. If there are only a few files, this may not be a major issue. However, when the number of files increases, manual file management becomes a repetitive and time-consuming process prone to errors. Leaving files accumulated in the Downloads folder is not an appropriate method. Therefore, we aim to develop an automated file management system that can read and understand file contents, analyze their meaning, and accurately categorize files. The system will use AI capabilities, particularly LLM, to move files to the appropriate destination folders.
@@ -749,6 +669,5 @@ The result from the Expert Evaluation from stated that the experts' opinions reg
 \bottomrule
 \end{longtable}
 
-\appendix
-\chapter{Experts' form}
+\appendix{Experts' form}
 \end{document}
