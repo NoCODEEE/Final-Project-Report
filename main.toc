@@ -46,5 +46,6 @@
 \contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {5.}\hskip -0.5em Conclusion and Recommendations}}}{19}{chapter.5}%
 \contentsline {section}{\numberline {5.1}The Evaluation tool used to evaluate the application was a performance evaluation form, divided into two sections:}{19}{section.5.1}%
 \contentsline {section}{\numberline {5.2}The data analysis in this project was conducted using computer software packages. The statistics used for analysis were as follows:}{19}{section.5.2}%
-\contentsline {chapter}{REFERENCES}{22}{section*.32}%
-\contentsline {chapter}{\mdseries \bf \MakeUppercase []{Appendix}}{23}{Item.10}%
+\contentsline {chapter}{REFERENCES}{22}{Item.15}%
+\contentsline {chapter}{\mdseries \bf \MakeUppercase []{Appendix}}{24}{Item.30}%
+\contentsline {apdx}{A\hskip 1em Experts' form}{25}{Item.30}%
