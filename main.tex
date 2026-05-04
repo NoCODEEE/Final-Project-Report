@@ -6,11 +6,11 @@
 \newfontfamily\thaifont[
   Script=Thai,
   Scale=1.23,
-  Path=C:/texlive/texmf-local/fonts/truetype/thai/,
-  UprightFont=THSarabunNew.ttf,
-  BoldFont=THSarabunNew-Bold.ttf,
-  ItalicFont=THSarabunNew-Italic.ttf,
-  BoldItalicFont=THSarabunNew-BoldItalic.ttf
+%   Path=C:/texlive/texmf-local/fonts/truetype/thai/,
+%   UprightFont=THSarabunNew.ttf,
+%   BoldFont=THSarabunNew-Bold.ttf,
+%   ItalicFont=THSarabunNew-Italic.ttf,
+%   BoldItalicFont=THSarabunNew-BoldItalic.ttf
 ]{TH Sarabun New}
 \defaultfontfeatures{Mapping=tex-text,Scale=1.0,LetterSpace=0.0}
 \setmainfont[Scale=1.0,LetterSpace=0,WordSpace=1.0,FakeStretch=1.0]{Times New Roman}
@@ -234,53 +234,6 @@ This project aims to develop a desktop application that uses an LLM to automatic
 \includegraphics[width=0.9\textwidth]{figures/figure_2.jpg}
 \caption{Main Sequence Diagram}
 \end{figure}
-\subsection{System Architecture and Organization Design}
-This design is grounded in the Clean Architecture principle, which states that software should be organized into concentric layers where outer layers depend on inner layers, never the reverse. Each layer in the system maps to a specific responsibility:
-
-\begin{longtable}{|p{0.16\textwidth}|p{0.24\textwidth}|p{0.52\textwidth}|}
-\caption{System architecture layers and responsibilities}\\
-\hline
-\textbf{Layer} & \textbf{Component} & \textbf{Responsibility} \\
-\hline
-UI & React/TypeScript & Render state and capture user intent \\
-\hline
-IPC & Tauri invoke() & Serialize and transmit commands across the process boundary \\
-\hline
-IPC Handler & Tauri command registration & Deserialize input, validate it, and route it to the appropriate command \\
-\hline
-Command & Rust command functions & Orchestrate one use case end-to-end \\
-\hline
-Service & Domain service classes & Encapsulate business logic \\
-\hline
-Infrastructure & File system, watcher, process manager & Execute side effects against the operating system \\
-\hline
-Repository & JSON / SQLite persistence & Read and write application state \\
-\hline
-\end{longtable}
-
-In Tauri, the frontend and the backend (Rust) run in separate processes with no shared memory. JavaScript cannot directly access the file system, spawn processes, or interact with the operating system. All cross-boundary calls must pass through the IPC channel (invoke()), which Tauri validates against a declared capability manifest before executing. This separation naturally enforces the Separation of Concerns principle: the UI layer contains no file-system logic, and the repository layer contains no rendering logic. If the storage format changes from JSON to SQLite, only the repository layer needs to change; the command, service, and UI layers remain unaffected.
-
-Furthermore, separating the Command layer from the Service layer allows the same business logic to be reused across multiple entry points, such as a manual user action, an automated watcher trigger, or a future scheduled task, without duplicating code.
-
-The organization feature is the core workflow of this project. Its design addresses three fundamental challenges: files may arrive one at a time or in large batches, AI analysis is slow and non-deterministic, and file moves are irreversible so user confirmation is required before any destructive action.
-
-The full pipeline is divided into four phases:
-
-\textbf{Phase 1: File Discovery}
-
-Files enter the organize pipeline through two mutually exclusive triggers. Manual selection starts when the user initiates a native file picker dialog through the UI. The Rust command opens the operating system's native dialog using the rfd library and returns the selected paths to the frontend. Automatic detection is used when the user has configured a watched folder. The backend registers a file system watcher using the notify crate, then applies debounce and stability checks before emitting a watched-file-added event to the frontend.
-
-\textbf{Phase 2: Frontend Queue Architecture}
-
-When files arrive, the frontend inserts each file path into a sequential analysis queue managed in the Zustand store. This queue acts as load leveling between the producer and the slow AI worker, prevents resource contention, preserves FIFO order, and allows the UI to render progress accurately.
-
-\textbf{Phase 3: AI Analysis}
-
-For each file dequeued, the frontend sends an HTTP POST request to the backend service, which runs as a separate Python process. This keeps the AI pipeline isolated from the UI, allows crashes to be handled independently, and makes future remote deployment possible without changing the frontend contract.
-
-\textbf{Phase 4: User Confirmation and File Execution}
-
-After analysis, the frontend shows ranked category suggestions, filename suggestions, and the original file path. File moves are only executed after user confirmation. The Tauri Rust backend performs the file-system operation, and the frontend records the original and new paths in the local history store so the undo flow can reverse the action later.
 
 \subsection{Frontend}
 The project is built with Tauri + React. The frontend provides a desktop UI for analyzing dropped files, suggesting categories and names, tracking organization history, and managing settings through a single cohesive interface.
@@ -326,6 +279,103 @@ Notifications & Sonner & Toast notification system for user feedback \\
 Package Manager & Bun & Fast JavaScript runtime and package manager \\
 \hline
 \end{longtable}
+
+\textbf{Architecture Layer}
+
+The frontend architecture will follow a strict layered structure, where each component is responsible for exactly one concern. The processing pipeline is organized as follows:
+\medskip
+\vspace{0.5em}
+
+UI → IPC (invoke) → IPC Handler → Command → Service → Infrastructure → Repository
+\medskip
+\vspace{0.5em}
+
+This design is grounded in the Clean Architecture principle introduced by Robert C. Martin (2012), which states that software should be organized into concentric layers where outer layers depend on inner layers, never the reverse. Each layer in the system maps to a specific responsibility:
+
+\begin{longtable}{|p{0.16\textwidth}|p{0.24\textwidth}|p{0.52\textwidth}|}
+\caption{System architecture layers and responsibilities}\\
+\hline
+\textbf{Layer} & \textbf{Component} & \textbf{Responsibility} \\
+\hline
+UI & React/TypeScript & Render state and capture user intent \\
+\hline
+IPC & Tauri invoke() & Serialize and transmit commands across the process boundary \\
+\hline
+IPC Handler & Tauri command registration & Deserialize input, validate it, and route it to the appropriate command \\
+\hline
+Command & Rust command functions & Orchestrate one use case end-to-end \\
+\hline
+Service & Domain service classes & Encapsulate business logic \\
+\hline
+Infrastructure & File system, watcher, process manager & Execute side effects against the operating system \\
+\hline
+Repository & JSON / SQLite persistence & Read and write application state \\
+\hline
+\end{longtable}
+
+In Tauri, the frontend and the backend (Rust) run in separate processes with no shared memory. JavaScript cannot directly access the file system, spawn processes, or interact with the operating system. This is by design, Tauri enforces a strict security boundary between the web context and native capabilities, similar to how web browsers sandbox JavaScript. All cross-boundary calls must pass through the IPC channel (invoke()), which Tauri validates against a declared capability manifest before executing.
+
+This constraint naturally enforces the Separation of Concerns principle (Dijkstra, 1974). The UI layer contains no file-system logic; the repository layer contains no rendering logic. Each layer can be reasoned about, tested, and modified independently. If the storage format for categories changes from JSON to SQLite, only the repository layer changes the command, service, and UI layers are unaffected.
+
+Furthermore, separating the Command layer from the Service layer allows the same business logic (e.g., moving a file and logging the event) to be reused across multiple entry points in a manual user action, an automated watcher trigger, or a future scheduled task without duplicating code.
+\vspace{0.2em}
+
+\textbf{Organization Design}
+
+The organization feature is the core workflow of this project. Its design addresses three fundamental challenges:
+\begin{enumerate}[label=\arabic*.,leftmargin=0.6in]
+\item Files may arrive one at a time or in large batches.
+\item AI analysis is slow, non-deterministic, and expensive per call.
+\item File moves are irreversible; user confirmation is required before any destructive action.
+\end{enumerate}
+
+The full pipeline is divided into four phases: File Discovery, Frontend Queue, AI Analysis, and User Confirmation and Execution.
+\vspace{0.2em}
+
+\textbf{Phase 1: File Discovery}
+Files enter the organize pipeline through two mutually exclusive triggers:
+Trigger A: Manual Selection
+The user initiates a native file picker dialog through the UI. Which will cross from IPC boundary into the Rust backend. The Rust command opens the operating system's native dialog using the rfd (Rusty File Dialogs) library and returns the selected paths to the frontend. This approach is used because a native dialog operates with full OS-level permissions and provides a familiar, OS-consistent experience. The JavaScript layer has no direct access to the file system path namespace; Tauri grants it only the specific paths the user explicitly chose.
+Trigger B: Automatic Detection via File System Watcher
+When the user has configured a watched folder, the Tauri backend registers a file system watcher using the notify crate. When a new file is created or modified in the watched directory, the watcher does not immediately forward the event. Instead, it will apply a two-stage validation:
+\begin{itemize}
+\item Debounce (500 ms quiet window): File system events fire multiple times during a single write operation. A debounce window collapses all events for the same path into one, preventing duplicate processing.
+\item Stability check (polling size and mtime for up to 30 retries): To prevent the system from attempting to analyze a file that is still being downloaded or written (e.g., .crdownload or .part files).
+\end{itemize}
+Once confirmed, Tauri emits a watched-file-added event to the frontend via the Tauri event system. This design choice keeps the Rust layer decoupled from the AI pipeline and lets the frontend apply the same queue-based flow regardless of how the file was discovered.
+\vspace{0.2em}
+
+\textbf{Phase 2: Frontend Queue Architecture}
+When files arrive (either from manual selection or from watcher events), the frontend does not immediately dispatch all files to the AI worker in parallel. Instead, it inserts each file path into a sequential analysis queue managed in the Zustand store.
+Why is queues necessary:
+This decision is justified by the Queue-Based Load Leveling pattern (Microsoft Azure Architecture Patterns, 2023), which states that a queue should be placed between a producer (the UI) and a slow consumer (the AI process) to prevent the consumer from being overwhelmed during load spikes. Specifically:
+\begin{enumerate}[label=\arabic*.,leftmargin=0.6in]
+\item The AI pipeline is not instantaneous. Each file requires LLM inference for summarization, embedding computation, and cosine similarity scoring against all categories. Processing multiple files in parallel would cause resource contention on the llama-server, increasing total latency per file rather than reducing it.
+\item Ordered processing is predictable. A first-in-first-out (FIFO) queue ensures files are processed in the order they were discovered, which matches user expectations when dropping a batch of files.
+\item Progress visibility. Because files are in a known queue, the UI can render a progress indicator ("3 of 7 files analyzed") accurately. Without a queue, concurrent fire-and-forget dispatches make it impossible to know the current processing state.
+\end{enumerate}
+
+\textbf{Phase 3: AI Analysis}
+For each file dequeued, the frontend dispatches an HTTP POST request to backend service, which is a separate Python process (FastAPI) that runs alongside the Tauri app as a sidecar. Separating the AI pipeline into its own process rather than embedding it in Rust or JavaScript is a deliberate architectural choice:
+\begin{itemize}
+\item Language ecosystem: Python has matured, well-maintained libraries for AI tasks implementing these in Rust would require significant effort with less library support.
+\item Process isolation: If the AI worker crashes due to an out-of-memory error or model failure, it does not crash the UI process. The Tauri backend can detect the failure and restart the sidecar independently.
+\item Independent scalability: In future versions, the worker could be moved to a remote server without changing the frontend or Tauri code, since they only communicate over HTTP.
+\end{itemize}
+
+\textbf{Phase 4: User Confirmation and File Execution}
+After the analysis result is returned to the frontend, it presents the user with:
+\begin{itemize}
+\item A ranked list of category suggestions with confidence scores.
+\item Three alternative filename suggestions generated by LLM.
+\item The original file path for reference.
+\end{itemize}
+Why user confirmation is mandatory before any file move:
+File moves are destructive and irreversible under normal circumstances (the original path no longer exists) so it requires that users should be able to undo actions or confirm before they are committed.
+Upon confirmation, the frontend calls invoke the method to move file. The Tauri Rust backend executes the actual file system operation. Using a Tauri command for the file move, rather than having Python backend process perform it, ensures that the file move is executed by the Rust process that holds the appropriate file system permissions declared in the Tauri capability manifest.
+After the move, the frontend writes history sessions to record the original and new paths in the local history store, enabling the undo operation. The undo flow simply reverses the action to move file followed by writing history record event with event type: "undone".
+
+
 
 \subsection{Backend}
 This project is a privacy-first local file organization system that assists users in categorizing and organizing files based on semantic understanding of file content. The system operates as a desktop application, processing files from absolute paths without uploading or transmitting content outside the local system boundary.
@@ -588,6 +638,7 @@ From Table 4.1, it was found that the experts' opinions regarding the performanc
 \begin{itemize}
 \item Consider adding an adjustable Confidence Score Threshold for users, such as asking the user for confirmation if the AI confidence score is lower than 70\%.
 \item Add a Batch Rename feature to rename files according to a predefined format.
+\item Develop an Analytics Dashboard to display file organization statistics, such as the number of files in each category and total file size.
 \end{itemize}
 \subsection*{Overall Comment}
 This application has academic value and can be applied in real-world use. It is recommended that the project be further developed as an Open-Source Project. The developers may also consider publishing a paper on the Hybrid Keyword-AI Approach for Thai-language documents.
@@ -648,6 +699,7 @@ This ``AI-powered file organizer application'' is highly suitable for presentati
 \item Consider Active Directory integration for organizations using a Windows Domain.
 \item Add API endpoints so that other systems can access and use the application.
 \item Develop a Health Check Dashboard for IT administrators to monitor system status.
+\item Add unit tests for critical functions.
 \end{itemize}
 \subsection*{Overall Comment}
 The application has a very strong foundation and is ready for personal use or small teams. However, if it is intended for use in large organizations, additional enterprise features should be developed according to the suggestions above. The use of Offline AI is an important strength in the on-premises solution market.
@@ -695,9 +747,8 @@ Mean score between 2.51 -- 3.50 means able to solve the problem appropriately, b
 Mean score between 1.51 -- 2.50 means able to solve the problem partially, but some gaps remain.
 
 Mean score between 1.00 -- 1.50 means unable to solve the problem.
-
-\medskip
-\noindent The result from the Expert Evaluation from stated that the experts' opinions regarding the performance of the ``AI-powered file organizer application'' were overall at the level of able to solve the problem effectively with minor improvements possible, with a mean score of 4.31. The standard deviation was 0.19, indicating a low level of dispersion from the mean. This means that the experts' opinions regarding the application's performance were similar and consistent. And when considering each evaluation item individually, four items were rated at the level of able to solve the problem completely and appropriately. These items were: The system can accurately and appropriately move files to destination folders according to defined templates, The Preview system effectively helps reduce errors before moving or modifying files, The system provides appropriate measures to prevent risks to user data, The system has the potential to support real-world use on Windows. The remaining evaluation items were rated at the level of able to solve the problem effectively with minor improvements possible.
+\vspace{1ex}
+The result from the Expert Evaluation from stated that the experts' opinions regarding the performance of the ``AI-powered file organizer application'' were overall at the level of able to solve the problem effectively with minor improvements possible, with a mean score of 4.31. The standard deviation was 0.19, indicating a low level of dispersion from the mean. This means that the experts' opinions regarding the application's performance were similar and consistent. And when considering each evaluation item individually, four items were rated at the level of able to solve the problem completely and appropriately. These items were: The system can accurately and appropriately move files to destination folders according to defined templates, The Preview system effectively helps reduce errors before moving or modifying files, The system provides appropriate measures to prevent risks to user data, The system has the potential to support real-world use on Windows. The remaining evaluation items were rated at the level of able to solve the problem effectively with minor improvements possible.
 
 \subsection*{Summary of Expert Opinions on the Performance Evaluation of the ``AI-powered file organizer application''}
 \begin{itemize}
@@ -709,12 +760,14 @@ Mean score between 1.00 -- 1.50 means unable to solve the problem.
 \begin{enumerate}[label=\arabic*.,leftmargin=0.6in]
 \item Consider adding an adjustable Confidence Score Threshold, such as asking the user for confirmation if the AI confidence score is lower than 70\%.
 \item Add a Batch Rename feature to rename files according to a predefined format.
+\item Develop an Analytics Dashboard to display file organization statistics, such as the number of files in each category and the total file size.
 \item Consider adding Multi-language Support, starting with Thai and English, which has already been implemented, and possibly adding more languages in the future.
 \item Add Export/Import Settings so that users can share templates with their colleagues.
 \item Develop a Lite Version for low-specification computers, which may use only keyword matching without AI.
 \item Consider Active Directory Integration for organizations using a Windows Domain.
 \item Add API Endpoints so that other systems can access and use the application.
 \item Develop a Health Check Dashboard for IT administrators to monitor system status.
+\item Add Unit Tests for critical functions.
 \end{enumerate}
 
 \chapter*{REFERENCES}\addcontentsline{toc}{chapter}{REFERENCES}
