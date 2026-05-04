@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.3)  4 MAY 2026 16:20
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.3)  4 MAY 2026 16:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -668,32 +668,32 @@ File: ppxetex.def 2026/03/30 v0.6h Pdfpages driver for XeTeX (AM)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 75.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 74.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 74.
  (c:/texlive/2026/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -729,7 +729,7 @@ LaTeX Font Info:    ... okay on input line 75.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 75.
+Package hyperref Info: Link coloring ON on input line 74.
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -751,19 +751,19 @@ File: figures/figure_5.jpg Graphic file (type bmp)
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 85.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 84.
  (c:/texlive/2026/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Underfull \hbox (badness 10000) in alignment at lines 85--85
+Underfull \hbox (badness 10000) in alignment at lines 84--84
 [] [] 
  []
 
@@ -772,15 +772,15 @@ Underfull \hbox (badness 10000) in alignment at lines 85--85
 Package hyperref Warning: bookmark level for unknown chapterx defaults to 0.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 87.
+(Font)              scaled to size 10.0pt on input line 86.
 
-Underfull \hbox (badness 10000) in alignment at lines 91--93
+Underfull \hbox (badness 10000) in alignment at lines 90--92
 [][] 
  []
 
 [2]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 12.29996pt on input line 100.
+(Font)              scaled to size 12.29996pt on input line 99.
 \thai@year=\count350
 \thai@year=\count351
 \thai@year=\count352
@@ -794,17 +794,17 @@ LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
 \thai@year=\count360
 \thai@year=\count361
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 12.29996pt on input line 106.
+(Font)              scaled to size 12.29996pt on input line 105.
 
-Underfull \hbox (badness 10000) in alignment at lines 105--107
+Underfull \hbox (badness 10000) in alignment at lines 104--106
 [][] 
  []
 
 [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 112.
+(Font)              scaled to size 12.0pt on input line 111.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 112.
+(Font)              scaled to size 12.0pt on input line 111.
  [4
 
 ] (./main.toc [5
@@ -833,10 +833,10 @@ Package hyperref Warning: bookmark level for unknown chapterxx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 123.
+(hyperref)                removed on input line 122.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 14.0pt on input line 124.
+(Font)              scaled to size 14.0pt on input line 123.
 [1
 
 ]
@@ -844,10 +844,10 @@ Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 144.
+(hyperref)                removed on input line 143.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 13.0pt on input line 146.
+(Font)              scaled to size 13.0pt on input line 145.
 [2
 
 ] [3] [4] [5]
@@ -855,7 +855,7 @@ Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 211.
+(hyperref)                removed on input line 210.
 
 File: figures/figure_1.png Graphic file (type bmp)
 <figures/figure_1.png>
@@ -865,22 +865,22 @@ File: figures/figure_1.png Graphic file (type bmp)
 File: figures/figure_2.jpg Graphic file (type bmp)
 <figures/figure_2.jpg>
 
-Underfull \hbox (badness 1325) in paragraph at lines 245--246
+Underfull \hbox (badness 1325) in paragraph at lines 244--245
 []|\TU/TimesNewRoman(0)/m/n/10 Serialize and transmit commands across the process
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 255--255
+Underfull \hbox (badness 5592) in paragraph at lines 254--254
 []|\TU/TimesNewRoman(0)/m/n/10 JSON / SQLite persis-
  []
 
 
-Overfull \hbox (2.91617pt too wide) in alignment at lines 238--257
+Overfull \hbox (2.91617pt too wide) in alignment at lines 237--256
  [] [] [] 
  []
 
 [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 347--347
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
 []|\TU/TimesNewRoman(0)/m/n/10 SQLAlchemy +
  []
 
@@ -889,7 +889,7 @@ Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 464.
+(hyperref)                removed on input line 463.
 
 File: figures/figure_3.png Graphic file (type bmp)
 <figures/figure_3.png>
@@ -898,7 +898,7 @@ File: figures/figure_4.png Graphic file (type bmp)
 [13
 
 ]
-Overfull \hbox (1.30957pt too wide) in alignment at lines 523--541
+Overfull \hbox (1.30957pt too wide) in alignment at lines 522--540
  [] [] [] [] 
  []
 
@@ -907,7 +907,7 @@ Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 634.
+(hyperref)                removed on input line 633.
 
 [19
 
@@ -920,7 +920,7 @@ Package hyperref Warning: bookmark level for unknown apdx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 714.
+(hyperref)                replaced by space on input line 713.
 
 File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
 <use Word/ประวัติผู้เชี่ยวชาญ.pdf>
@@ -1042,23 +1042,35 @@ File: Word/แบบประเมิณหาประสิทธิภาพ
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 724.
+(hyperref)                replaced by space on input line 723.
 
-(./main.aux)
+File: figures/Picture4.png Graphic file (type bmp)
+<figures/Picture4.png>
+File: figures/Picture5.png Graphic file (type bmp)
+<figures/Picture5.png>
+[35]
+File: figures/Picture6.png Graphic file (type bmp)
+<figures/Picture6.png>
+File: figures/Picture7.png Graphic file (type bmp)
+<figures/Picture7.png>
+ [36]
+File: figures/Picture8.png Graphic file (type bmp)
+<figures/Picture8.png>
+ [37] [38] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B5BD4EC35A3E1F623EABDE3CD631324A;9838.
+(rerunfilecheck)             Checksum: D91083321E616978C3F64B8E3F35A73B;7939.
  ) 
 Here is how much of TeX's memory you used:
- 20796 strings out of 467992
- 392153 string characters out of 5433178
- 875799 words of memory out of 5000000
- 49377 multiletter control sequences out of 15000+600000
+ 20843 strings out of 467992
+ 393266 string characters out of 5433178
+ 874014 words of memory out of 5000000
+ 49419 multiletter control sequences out of 15000+600000
  630346 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,17n,117p,1601b,556s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,17n,117p,1601b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (43 pages, 616280 bytes).
+Output written on main.xdv (47 pages, 642892 bytes).
