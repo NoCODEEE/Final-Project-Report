@@ -42,9 +42,8 @@
 \def\disscoadvisor{}
 \def\disscoadvisortwo{}
 \def\disscoadvisorthree{}
-\def\disscommitteetwo{Name, Title}
-\def\disscommitteethree{Name, Title}
-\def\disscommitteefour{Name, Title}
+\def\disscommitteetwo{Jaturon Harnsomburana, Ph.D.}
+\def\disscommitteethree{Naruemon Wattanapongsakorn, Ph.D.}
 
 \def\worktype{Project}
 \def\disscredit{3}
@@ -236,7 +235,7 @@ This project aims to develop a desktop application that uses an LLM to automatic
 This design is grounded in the Clean Architecture principle, which states that software should be organized into concentric layers where outer layers depend on inner layers, never the reverse. Each layer in the system maps to a specific responsibility:
 
 \begin{longtable}{|p{0.16\textwidth}|p{0.24\textwidth}|p{0.52\textwidth}|}
-\caption{Table 2: System architecture layers and responsibilities}\\
+\caption{System architecture layers and responsibilities}\\
 \hline
 \textbf{Layer} & \textbf{Component} & \textbf{Responsibility} \\
 \hline
@@ -293,7 +292,7 @@ The project is built with Tauri + React. The frontend provides a desktop UI for 
 \item Background Automation: Real-time monitoring and queued file processing with concurrency control
 \end{itemize}
 \begin{longtable}{|p{0.22\textwidth}|p{0.20\textwidth}|p{0.48\textwidth}|}
-\caption{Table 1: Tools and Technology implementation in frontend}\\
+\caption{Tools and Technology implementation in frontend}\\
 \hline
 \textbf{Component} & \textbf{Technology} & \textbf{Rationale} \\
 \hline
@@ -338,7 +337,7 @@ This project is a privacy-first local file organization system that assists user
 \item Database: Cache on activity. Participating in workflow for the purpose of reducing workload and remembering the already processed file
 \end{itemize}
 \begin{longtable}{|p{0.20\textwidth}|p{0.20\textwidth}|p{0.50\textwidth}|}
-\caption{Table 3: Tools and technology implementation in backend}\\
+\caption{Tools and technology implementation in backend}\\
 \hline
 \textbf{Category} & \textbf{Tool} & \textbf{Purpose} \\
 \hline
@@ -398,7 +397,7 @@ So, the basic workflow should be like this:
 \item Load existing File records from database
 \item Determine which files have changed
 \end{itemize}
-↓
+\noindent\hspace*{0.6in}↓
 
 [Stage 2] Cache Check
 
@@ -407,7 +406,7 @@ So, the basic workflow should be like this:
 \item If categories changed but file unchanged → Partial (re-classify only)
 \item If file changed or forced → Full pipeline
 \end{itemize}
-↓
+\noindent\hspace*{0.6in}↓
 
 [Stage 3a: Full pipeline] Parse \& Queue Background Ingestion
 
@@ -415,7 +414,7 @@ So, the basic workflow should be like this:
 \item Parsing and extracting
 \item Enqueue file into background RAG ingestion
 \end{itemize}
-↓
+\noindent\hspace*{0.6in}↓
 
 [Stage 3b] Generate Summary (if not cached)
 
@@ -424,7 +423,7 @@ So, the basic workflow should be like this:
 \item If text: use extracted text + LLM summary
 \item If neither: filename fallback
 \end{itemize}
-↓
+\noindent\hspace*{0.6in}↓
 
 [Stage 4] Generate Rename Suggestions (if summary available)
 
@@ -432,7 +431,7 @@ So, the basic workflow should be like this:
 \item LLM generates N candidate filenames based on summary
 \item Sanitize and validate suggestions
 \end{itemize}
-↓
+\noindent\hspace*{0.6in}↓
 
 [Stage 5] Classify Files
 
@@ -442,7 +441,7 @@ So, the basic workflow should be like this:
 \item Compute cosine similarity for each category
 \item Sort by score descending; retain top-K
 \end{itemize}
-↓
+\noindent\hspace*{0.6in}↓
 
 [Stage 6] Return Results
 
@@ -462,7 +461,7 @@ To conform with objectives of this project which is service invention project in
 \item Expert Evaluation form: This method is to use form made with technical questions to ask the expert in the field of computer engineering or software developer after we send our application to them to test. The questions must be related to the project objectives, and with an odd number of experts participating, we can also get a consensus on whether the application is successful or not.
 \end{itemize}
 \chapter{Results and Analysis}
-\subsection*{Finished Product}
+\section{Finished Product}
 \begin{figure}[H]\centering
 \includegraphics[width=0.9\textwidth]{figures/figure_3.png}
 \caption{Diagram from the source document}
@@ -480,10 +479,10 @@ The project ``AI-powered file organizer application'' was conducted according to
 \item Collecting data for development and improvement
 \item Analyzing data and summarizing the project results
 \end{itemize}
-\subsection*{Methodology}
+\section{Methodology}
 1. Expert Evaluation tool for Application Performance
 
-\section{The Evaluation tool used to evaluate the application was a performance evaluation form, divided into two sections:}
+\subsection*{The Evaluation tool used to evaluate the application was a performance evaluation form, divided into two sections:}
 Part 1: Performance evaluation of the ``AI-powered file organizer application'' by experts. The project developers defined a 5-point scoring scale with the following meanings:
 
 \begin{itemize}
@@ -495,7 +494,7 @@ Part 1: Performance evaluation of the ``AI-powered file organizer application'' 
 \end{itemize}
 Part 2: Additional comments and suggestions on the performance evaluation of the ``AI-powered file organizer application''
 
-\section{The data analysis in this project was conducted using computer software packages. The statistics used for analysis were as follows:}
+\subsection*{The data analysis in this project was conducted using computer software packages. The statistics used for analysis were as follows:}
 Data from the performance evaluation form of the ``AI-powered file organizer application'' were analyzed using the mean ( X ) and standard deviation ( S.D. ). The interpretation of the mean scores was defined as follows (Boonchom Srisa-ard, 2002: 162):
 
 Mean score between 4.51 -- 5.00 means able to solve the problem completely and appropriately.
@@ -521,7 +520,7 @@ Part 2: Additional comments and suggestions on the performance evaluation of the
 Part 1: Analysis results of the expert performance evaluation of the ``AI-powered file organizer application'' using the mean and standard deviation, both overall and by individual evaluation items.
 
 \begin{longtable}{@{}p{0.52\textwidth}p{0.12\textwidth}p{0.12\textwidth}p{0.16\textwidth}@{}}
-\caption{Table 2: Mean, standard deviation, and analysis of expert opinions regarding the performance of the ``AI-powered file organizer application''}\\
+\caption{Mean, standard deviation, and analysis of expert opinions regarding the performance of the ``AI-powered file organizer application''}\\
 \toprule
 Evaluation Items & Result &  &  \\
 \midrule
@@ -540,7 +539,7 @@ Total & 4.31 & 0.19 & ( 4 ) \\
 \bottomrule
 \end{longtable}
 
-From Table 2, it was found that the experts' opinions regarding the performance of the ``AI-powered file organizer application'' were overall at the level of able to solve the problem effectively with minor improvements possible, with a mean score of 4.31. The standard deviation was 0.19, indicating a low level of dispersion from the mean. This means that the experts' opinions regarding the application's performance were similar and consistent. And when considering each evaluation item individually, four items were rated at the level of able to solve the problem completely and appropriately. These items were: The system can accurately and appropriately move files to destination folders according to defined templates, The Preview system effectively helps reduce errors before moving or modifying files, The system provides appropriate measures to prevent risks to user data, The system has the potential to support real-world use on Windows. The remaining evaluation items were rated at the level of able to solve the problem effectively with minor improvements possible.
+From Table 4.1, it was found that the experts' opinions regarding the performance of the ``AI-powered file organizer application'' were overall at the level of able to solve the problem effectively with minor improvements possible, with a mean score of 4.31. The standard deviation was 0.19, indicating a low level of dispersion from the mean. This means that the experts' opinions regarding the application's performance were similar and consistent. And when considering each evaluation item individually, four items were rated at the level of able to solve the problem completely and appropriately. These items were: The system can accurately and appropriately move files to destination folders according to defined templates, The Preview system effectively helps reduce errors before moving or modifying files, The system provides appropriate measures to prevent risks to user data, The system has the potential to support real-world use on Windows. The remaining evaluation items were rated at the level of able to solve the problem effectively with minor improvements possible.
 
 \bigskip
 \noindent\textbf{Part 2: Additional Comments and Suggestions on the Performance Evaluation of the ``AI-powered file organizer application''}
@@ -628,13 +627,13 @@ This ``AI-powered file organizer application'' is highly suitable for presentati
 \item Develop a Health Check Dashboard for IT administrators to monitor system status.
 \item Add unit tests for critical functions.
 \end{itemize}
-\subsection*{Summary}
+\subsection*{Overall Comment}
 The application has a very strong foundation and is ready for personal use or small teams. However, if it is intended for use in large organizations, additional enterprise features should be developed according to the suggestions above. The use of Offline AI is an important strength in the on-premises solution market.
 
 \chapter{Conclusion and Recommendations}
 The project titled ``AI-powered file organizer application'' can be summarized, discussed, and presented with recommendations as follows:
 
-\subsection*{Project Summary}
+\section{Project Summary}
 \subsection*{Project Objectives}
 \begin{itemize}
 \item To develop a desktop application that helps users manage files efficiently with AI.
@@ -642,10 +641,10 @@ The project titled ``AI-powered file organizer application'' can be summarized, 
 \item To improve the convenience of searching and organizing files through customizable file management templates.
 \item To establish a foundation for future expansion toward Agentic AI features, such as file content summarization, note generation, and calendar integration.
 \end{itemize}
-\subsection*{Methodology}
+\section{Methodology}
 1. Expert Evaluation tool for Application Performance
 
-\section{The Evaluation tool used to evaluate the application was a performance evaluation form, divided into two sections:}
+\subsection*{The Evaluation tool used to evaluate the application was a performance evaluation form, divided into two sections:}
 Part 1: Performance evaluation of the ``AI-powered file organizer application'' by experts. The project developers defined a 5-point scoring scale with the following meanings:
 
 \begin{enumerate}[label=\arabic*.,leftmargin=0.6in]
@@ -657,7 +656,7 @@ Part 1: Performance evaluation of the ``AI-powered file organizer application'' 
 \end{enumerate}
 Part 2: Additional comments and suggestions on the performance evaluation of the ``AI-powered file organizer application''
 
-\section{The data analysis in this project was conducted using computer software packages. The statistics used for analysis were as follows:}
+\subsection*{The data analysis in this project was conducted using computer software packages. The statistics used for analysis were as follows:}
 Data from the performance evaluation form of the ``AI-powered file organizer application'' were analyzed using the mean ( X ) and standard deviation ( S.D. ). The interpretation of the mean scores was defined as follows (Boonchom Srisa-ard, 2002: 162):
 
 Mean score between 4.51 -- 5.00 means able to solve the problem completely and appropriately.
@@ -678,7 +677,7 @@ The result from the Expert Evaluation from stated that the experts' opinions reg
 \item This ``AI-powered file organizer application'' is highly suitable for presentation at an academic conference. It should also be considered for release as an Open-Source Project so that the community can benefit from it. This would also help build recognition for the institution and the developers.
 \item The application has a very strong foundation and is ready for personal use or small teams. However, if it is intended for use in large organizations, additional enterprise features should be developed according to the suggestions above. The use of Offline AI is an important strength in the on-premises solution market.
 \end{itemize}
-\subsection*{Project Recommendations}
+\section{Project Recommendations}
 \begin{enumerate}[label=\arabic*.,leftmargin=0.6in]
 \item Consider adding an adjustable Confidence Score Threshold, such as asking the user for confirmation if the AI confidence score is lower than 70\%.
 \item Add a Batch Rename feature to rename files according to a predefined format.
