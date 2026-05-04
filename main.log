@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.3)  4 MAY 2026 15:58
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.3)  4 MAY 2026 16:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -359,114 +359,42 @@ Package polyglossia Info: Default language is english
 File: gloss-thai.ldf polyglossia: module for Thai
 )
 
-c:/Work/Project/Final-Project-Report/main.tex:8: Package fontspec Error: 
-(fontspec)                The font "TH Sarabun New" cannot be found; this
-(fontspec)                may be but usually is not a fontspec bug. Either
-(fontspec)                there is a typo in the font name/file, the font is
-(fontspec)                not installed (correctly), or there is a bug in
-(fontspec)                the underlying font loading engine
-(fontspec)                (XeTeX/luaotfload).
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.8 \defaultfontfeatures
-                        {Mapping=tex-text,Scale=1.0,LetterSpace=0.0}
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
+Package fontspec Info: 
+(fontspec)             THSarabunNew.ttf scale = 1.23.
 
 
 Package fontspec Info: 
-(fontspec)             Script 'Thai' not explicitly supported within font 'TH
-(fontspec)             Sarabun New'. Check the typeset output, and if it is
-(fontspec)             okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
+(fontspec)             THSarabunNew scale = 1.23.
 
 
 Package fontspec Info: 
-(fontspec)             TH Sarabun New scale = 1.23.
+(fontspec)             THSarabunNew-Bold scale = 1.23.
 
 
 Package fontspec Info: 
-(fontspec)             Could not resolve font "TH Sarabun New/BI" (it probably
-(fontspec)             doesn't exist).
+(fontspec)             THSarabunNew-Italic scale = 1.23.
 
 
 Package fontspec Info: 
-(fontspec)             Could not resolve font "TH Sarabun New/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "TH Sarabun New/I" (it probably
-(fontspec)             doesn't exist).
-
-
-c:/Work/Project/Final-Project-Report/main.tex:8: Package fontspec Error: 
-(fontspec)                The font "TH Sarabun New" cannot be found; this
-(fontspec)                may be but usually is not a fontspec bug. Either
-(fontspec)                there is a typo in the font name/file, the font is
-(fontspec)                not installed (correctly), or there is a bug in
-(fontspec)                the underlying font loading engine
-(fontspec)                (XeTeX/luaotfload).
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.8 \defaultfontfeatures
-                        {Mapping=tex-text,Scale=1.0,LetterSpace=0.0}
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
-c:/Work/Project/Final-Project-Report/main.tex:8: Package fontspec Error: 
-(fontspec)                The font "TH Sarabun New" cannot be found; this
-(fontspec)                may be but usually is not a fontspec bug. Either
-(fontspec)                there is a typo in the font name/file, the font is
-(fontspec)                not installed (correctly), or there is a bug in
-(fontspec)                the underlying font loading engine
-(fontspec)                (XeTeX/luaotfload).
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.8 \defaultfontfeatures
-                        {Mapping=tex-text,Scale=1.0,LetterSpace=0.0}
-
-A font might not be found for many reasons.
- Check the spelling, where the font is installed etc. etc.
-
- When in doubt, ask someone for help!
-
-
-
-Package fontspec Info: 
-(fontspec)             TH Sarabun New scale = 1.23.
-
-
-Package fontspec Info: 
-(fontspec)             TH Sarabun New scale = 1.23.
+(fontspec)             THSarabunNew-BoldItalic scale = 1.23.
 
 
 Package fontspec Info: 
 (fontspec)             Font family 'THSarabunNew(0)' created for font 'TH
-(fontspec)             Sarabun New' with options [Script=Thai,Scale=1.23].
+(fontspec)             Sarabun New' with options
+(fontspec)             [Script=Thai,Scale=1.23,Path=C:/texlive/texmf-local/fonts/truetype/thai/,UprightFont=THSarabunNew.ttf,BoldFont=THSarabunNew-Bold.ttf,ItalicFont=THSarabunNew-Italic.ttf,BoldItalicFont=THSarabunNew-BoldItalic.ttf].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1.23]"TH
-(fontspec)             Sarabun New/OT"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->s*[1.23]"TH
-(fontspec)             Sarabun New/OT"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.23]"[C:/texlive/texmf-local/fonts/truetype/thai/THSarabunNew.ttf]/OT:script=thai;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.23]"[C:/texlive/texmf-local/fonts/truetype/thai/THSarabunNew-Bold.ttf]/OT:script=thai;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.23]"[C:/texlive/texmf-local/fonts/truetype/thai/THSarabunNew-Italic.ttf]/OT:script=thai;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.23]"[C:/texlive/texmf-local/fonts/truetype/thai/THSarabunNew-BoldItalic.ttf]/OT:script=thai;language=dflt;"
 
 
 Package fontspec Info: 
@@ -588,8 +516,8 @@ Package fontspec Info:
 (fontspec)             =1.0\fontdimen 4\font 
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 10.
-(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+(Font)              scaled to size 10.0pt on input line 18.
+ (c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count330
 \float@exts=\toks33
@@ -740,32 +668,32 @@ File: ppxetex.def 2026/03/30 v0.6h Pdfpages driver for XeTeX (AM)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 68.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 76.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 76.
  (c:/texlive/2026/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -801,7 +729,7 @@ LaTeX Font Info:    ... okay on input line 68.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 68.
+Package hyperref Info: Link coloring ON on input line 76.
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -823,19 +751,19 @@ File: figures/figure_5.jpg Graphic file (type bmp)
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
  (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 78.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 86.
  (c:/texlive/2026/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Underfull \hbox (badness 10000) in alignment at lines 78--78
+Underfull \hbox (badness 10000) in alignment at lines 86--86
 [] [] 
  []
 
@@ -844,1912 +772,39 @@ Underfull \hbox (badness 10000) in alignment at lines 78--78
 Package hyperref Warning: bookmark level for unknown chapterx defaults to 0.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 80.
+(Font)              scaled to size 10.0pt on input line 88.
 
-Underfull \hbox (badness 10000) in alignment at lines 84--86
+Underfull \hbox (badness 10000) in alignment at lines 92--94
 [][] 
  []
 
 [2]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 12.29996pt on input line 93.
-
-c:/Work/Project/Final-Project-Report/main.tex:93: Font TU/THSarabunNew(0)/m/n/10="TH Sarabun New/OT" at 12.29996pt not loadable: Metric (TFM) file or installed font not found.
-<to be read again> 
-                   relax 
-l.93 \thaifont
-              
-I wasn't able to read the size data for this font,
-so I will ignore the font specification.
-[Wizards can fix TFM files using TFtoPL/PLtoTF.]
-You might try inserting a different font spec;
-e.g., type `I\font<same font id>=<substitute font name>'.
-
+(Font)              scaled to size 12.29996pt on input line 101.
 \thai@year=\count350
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no - ("2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ญ ("E0D) in font nullfont!
-Missing character: There is no ญ ("E0D) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ธ ("E18) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no I ("49) in font nullfont!
 \thai@year=\count351
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
 \thai@year=\count352
-Missing character: There is no 3 ("33) in font nullfont!
 \thai@year=\count353
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ณ ("E13) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ฐ ("E10) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
 \thai@year=\count354
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ษ ("E29) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ธ ("E18) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ณ ("E13) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ฒ ("E12) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
 \thai@year=\count355
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ณ ("E13) in font nullfont!
-Missing character: There is no ฑ ("E11) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
 \thai@year=\count356
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
 \thai@year=\count357
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
 \thai@year=\count358
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ณ ("E13) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
 \thai@year=\count359
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ศ ("E28) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ษ ("E29) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
 \thai@year=\count360
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
 \thai@year=\count361
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no I ("49) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ๆ ("E46) in font nullfont!
-Missing character: There is no ซ ("E0B) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ณ ("E13) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ญ ("E0D) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ฒ ("E12) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ถ ("E16) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ถ ("E16) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ถ ("E16) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no I ("49) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ซ ("E0B) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ฐ ("E10) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no g ("67) in font nullfont!
-Missing character: There is no e ("65) in font nullfont!
-Missing character: There is no n ("6E) in font nullfont!
-Missing character: There is no t ("74) in font nullfont!
-Missing character: There is no i ("69) in font nullfont!
-Missing character: There is no c ("63) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ฏ ("E0F) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no L ("4C) in font nullfont!
-Missing character: There is no o ("6F) in font nullfont!
-Missing character: There is no c ("63) in font nullfont!
-Missing character: There is no a ("61) in font nullfont!
-Missing character: There is no l ("6C) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ฒ ("E12) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ธ ("E18) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no I ("49) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ธ ("E18) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ญ ("E0D) in font nullfont!
-Missing character: There is no ซ ("E0B) in font nullfont!
-Missing character: There is no ึ ("E36) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ธ ("E18) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ญ ("E0D) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ธ ("E18) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ( ("28) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ฉ ("E09) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no 4 ("34) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 3 ("33) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no ) ("29) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ฐ ("E10) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 9 ("39) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ฉ ("E09) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ผ ("E1C) in font nullfont!
-Missing character: There is no ู ("E39) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ญ ("E0D) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ธ ("E18) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ภ ("E20) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ข ("E02) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no I ("49) in font nullfont!
-Missing character: There is no " ("22) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ุ ("E38) in font nullfont!
-Missing character: There is no ณ ("E13) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ถ ("E16) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ถ ("E16) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ฒ ("E12) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no ็ ("E47) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no O ("4F) in font nullfont!
-Missing character: There is no p ("70) in font nullfont!
-Missing character: There is no e ("65) in font nullfont!
-Missing character: There is no n ("6E) in font nullfont!
-Missing character: There is no S ("53) in font nullfont!
-Missing character: There is no o ("6F) in font nullfont!
-Missing character: There is no u ("75) in font nullfont!
-Missing character: There is no r ("72) in font nullfont!
-Missing character: There is no c ("63) in font nullfont!
-Missing character: There is no e ("65) in font nullfont!
-Missing character: There is no P ("50) in font nullfont!
-Missing character: There is no r ("72) in font nullfont!
-Missing character: There is no o ("6F) in font nullfont!
-Missing character: There is no j ("6A) in font nullfont!
-Missing character: There is no e ("65) in font nullfont!
-Missing character: There is no c ("63) in font nullfont!
-Missing character: There is no t ("74) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ฐ ("E10) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ท ("E17) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ใ ("E43) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no p ("70) in font nullfont!
-Missing character: There is no e ("65) in font nullfont!
-Missing character: There is no r ("72) in font nullfont!
-Missing character: There is no s ("73) in font nullfont!
-Missing character: There is no o ("6F) in font nullfont!
-Missing character: There is no n ("6E) in font nullfont!
-Missing character: There is no a ("61) in font nullfont!
-Missing character: There is no l ("6C) in font nullfont!
-Missing character: There is no u ("75) in font nullfont!
-Missing character: There is no s ("73) in font nullfont!
-Missing character: There is no e ("65) in font nullfont!
-Missing character: There is no ห ("E2B) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ื ("E37) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no s ("73) in font nullfont!
-Missing character: There is no m ("6D) in font nullfont!
-Missing character: There is no a ("61) in font nullfont!
-Missing character: There is no l ("6C) in font nullfont!
-Missing character: There is no l ("6C) in font nullfont!
-Missing character: There is no t ("74) in font nullfont!
-Missing character: There is no e ("65) in font nullfont!
-Missing character: There is no a ("61) in font nullfont!
-Missing character: There is no m ("6D) in font nullfont!
+LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
+(Font)              scaled to size 12.29996pt on input line 107.
 
-LaTeX Font Warning: Font shape `TU/THSarabunNew(0)/b/n' undefined
-(Font)              using `TU/THSarabunNew(0)/m/n' instead on input line 99.
-
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ญ ("E0D) in font nullfont!
-Missing character: There is no : ("3A) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ป ("E1B) in font nullfont!
-Missing character: There is no พ ("E1E) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no ค ("E04) in font nullfont!
-Missing character: There is no ช ("E0A) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ะ ("E30) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ี ("E35) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no บ ("E1A) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no ่ ("E48) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ง ("E07) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no โ ("E42) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ม ("E21) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ต ("E15) in font nullfont!
-Missing character: There is no ิ ("E34) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ้ ("E49) in font nullfont!
-Missing character: There is no ว ("E27) in font nullfont!
-Missing character: There is no ย ("E22) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no I ("49) in font nullfont!
-Missing character: There is no / ("2F) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ั ("E31) in font nullfont!
-Missing character: There is no ด ("E14) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no ไ ("E44) in font nullfont!
-Missing character: There is no ฟ ("E1F) in font nullfont!
-Missing character: There is no ล ("E25) in font nullfont!
-Missing character: There is no ์ ("E4C) in font nullfont!
-Missing character: There is no / ("2F) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no จ ("E08) in font nullfont!
-Missing character: There is no ำ ("E33) in font nullfont!
-Missing character: There is no แ ("E41) in font nullfont!
-Missing character: There is no น ("E19) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no เ ("E40) in font nullfont!
-Missing character: There is no อ ("E2D) in font nullfont!
-Missing character: There is no ก ("E01) in font nullfont!
-Missing character: There is no ส ("E2A) in font nullfont!
-Missing character: There is no า ("E32) in font nullfont!
-Missing character: There is no ร ("E23) in font nullfont!
-Missing character: There is no / ("2F) in font nullfont!
-Missing character: There is no L ("4C) in font nullfont!
-Missing character: There is no L ("4C) in font nullfont!
-Missing character: There is no M ("4D) in font nullfont!
-Missing character: There is no / ("2F) in font nullfont!
-Missing character: There is no R ("52) in font nullfont!
-Missing character: There is no A ("41) in font nullfont!
-Missing character: There is no G ("47) in font nullfont!
-
-Underfull \hbox (badness 10000) in alignment at lines 98--100
+Underfull \hbox (badness 10000) in alignment at lines 106--108
 [][] 
  []
 
 [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 105.
+(Font)              scaled to size 12.0pt on input line 113.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 105.
+(Font)              scaled to size 12.0pt on input line 113.
  [4
 
 ] (./main.toc [5
@@ -2778,10 +833,10 @@ Package hyperref Warning: bookmark level for unknown chapterxx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 116.
+(hyperref)                removed on input line 124.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 14.0pt on input line 117.
+(Font)              scaled to size 14.0pt on input line 125.
 [1
 
 ]
@@ -2789,10 +844,10 @@ Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 137.
+(hyperref)                removed on input line 145.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 13.0pt on input line 139.
+(Font)              scaled to size 13.0pt on input line 147.
 [2
 
 ] [3] [4] [5]
@@ -2800,7 +855,7 @@ Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 204.
+(hyperref)                removed on input line 212.
 
 File: figures/figure_1.png Graphic file (type bmp)
 <figures/figure_1.png>
@@ -2810,22 +865,22 @@ File: figures/figure_1.png Graphic file (type bmp)
 File: figures/figure_2.jpg Graphic file (type bmp)
 <figures/figure_2.jpg>
 
-Underfull \hbox (badness 1325) in paragraph at lines 238--239
+Underfull \hbox (badness 1325) in paragraph at lines 246--247
 []|\TU/TimesNewRoman(0)/m/n/10 Serialize and transmit commands across the process
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 248--248
+Underfull \hbox (badness 5592) in paragraph at lines 256--256
 []|\TU/TimesNewRoman(0)/m/n/10 JSON / SQLite persis-
  []
 
 
-Overfull \hbox (2.91617pt too wide) in alignment at lines 231--250
+Overfull \hbox (2.91617pt too wide) in alignment at lines 239--258
  [] [] [] 
  []
 
 [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 348--348
 []|\TU/TimesNewRoman(0)/m/n/10 SQLAlchemy +
  []
 
@@ -2834,7 +889,7 @@ Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 457.
+(hyperref)                removed on input line 465.
 
 File: figures/figure_3.png Graphic file (type bmp)
 <figures/figure_3.png>
@@ -2843,7 +898,7 @@ File: figures/figure_4.png Graphic file (type bmp)
 [13
 
 ]
-Overfull \hbox (1.30957pt too wide) in alignment at lines 516--534
+Overfull \hbox (1.30957pt too wide) in alignment at lines 524--542
  [] [] [] [] 
  []
 
@@ -2852,7 +907,7 @@ Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 623.
+(hyperref)                removed on input line 631.
 
 [19
 
@@ -2865,7 +920,7 @@ Package hyperref Warning: bookmark level for unknown apdx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 703.
+(hyperref)                replaced by space on input line 711.
 
 File: Word/ประวัติผู้เชี่ยวชาญ.pdf Graphic file (type pdf)
 <use Word/ประวัติผู้เชี่ยวชาญ.pdf>
@@ -2987,27 +1042,23 @@ File: Word/แบบประเมิณหาประสิทธิภาพ
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 713.
+(hyperref)                replaced by space on input line 721.
 
 (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B5BD4EC35A3E1F623EABDE3CD631324A;9838.
  ) 
 Here is how much of TeX's memory you used:
- 20771 strings out of 467992
- 390435 string characters out of 5433178
- 874326 words of memory out of 5000000
- 49361 multiletter control sequences out of 15000+600000
- 630282 words of font info for 75 fonts, out of 8000000 for 9000
+ 20796 strings out of 467992
+ 392153 string characters out of 5433178
+ 874799 words of memory out of 5000000
+ 49377 multiletter control sequences out of 15000+600000
+ 630346 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,17n,117p,1601b,556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (43 pages, 593672 bytes).
+Output written on main.xdv (43 pages, 616336 bytes).

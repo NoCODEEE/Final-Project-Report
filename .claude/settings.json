@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Windows\\\\Fonts\\\\TH*\")",
+      "Read(//c/Windows/Fonts/**)",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\\\\Microsoft\\\\Windows\\\\Fonts\" | Select-Object Name | head)",
+      "Read(//c/texlive/texmf-local/fonts/**)",
+      "PowerShell(Get-ChildItem \"C:\\\\texlive\" -Depth 2 | Where-Object { $_.PSIsContainer } | Select-Object FullName | Select-Object -First 20)",
+      "Read(//c/texlive/**)",
+      "PowerShell($src = \"$env:LOCALAPPDATA\\\\Microsoft\\\\Windows\\\\Fonts\"; $dst = \"C:\\\\texlive\\\\texmf-local\\\\fonts\\\\truetype\\\\thai\"; New-Item -ItemType Directory -Force -Path $dst | Out-Null; Copy-Item \"$src\\\\THSarabunNew\\(1\\).ttf\" \"$dst\\\\THSarabunNew.ttf\"; Copy-Item \"$src\\\\THSarabunNew Bold\\(1\\).ttf\" \"$dst\\\\THSarabunNew-Bold.ttf\"; Copy-Item \"$src\\\\THSarabunNew Italic\\(1\\).ttf\" \"$dst\\\\THSarabunNew-Italic.ttf\"; Copy-Item \"$src\\\\THSarabunNew BoldItalic\\(1\\).ttf\" \"$dst\\\\THSarabunNew-BoldItalic.ttf\"; Write-Host \"Copied fonts to $dst\"; Get-ChildItem $dst | Select-Object Name)",
+      "PowerShell(mktexlsr)",
+      "PowerShell(fc-cache -fv \"C:\\\\texlive\\\\texmf-local\\\\fonts\\\\truetype\\\\thai\")"
+    ]
+  }
+}

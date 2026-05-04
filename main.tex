@@ -4,7 +4,15 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \setotherlanguage{thai}
-\newfontfamily\thaifont[Script=Thai,Scale=1.23]{TH Sarabun New}
+\newfontfamily\thaifont[
+  Script=Thai,
+  Scale=1.23,
+  Path=C:/texlive/texmf-local/fonts/truetype/thai/,
+  UprightFont=THSarabunNew.ttf,
+  BoldFont=THSarabunNew-Bold.ttf,
+  ItalicFont=THSarabunNew-Italic.ttf,
+  BoldItalicFont=THSarabunNew-BoldItalic.ttf
+]{TH Sarabun New}
 \defaultfontfeatures{Mapping=tex-text,Scale=1.0,LetterSpace=0.0}
 \setmainfont[Scale=1.0,LetterSpace=0,WordSpace=1.0,FakeStretch=1.0]{Times New Roman}
 \emergencystretch=10pt
