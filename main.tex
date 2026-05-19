@@ -507,13 +507,14 @@ So, the basic workflow should be like this:
 [Response] (with scores, suggestions, timings)
 
 \section{Evaluation method}
-To conform with objectives of this project which is service invention project in the form of desktop application, the evaluation method must include the Performance testing and End-user opinion. So, in this case there are some of the best ways to which is:
+To conform with objectives of this project which is a service invention project in the form of a desktop application, the evaluation method must include both Performance testing and End-user opinion. To cover both aspects in a structured way, the evaluation strategy of this project is organized into three complementary layers, each answering a different question about the system:
 
 \begin{itemize}
-\item Satisfactory form for end-user: This method is to use form or survey to ask the end-user that we, developer of this project, distribute our application to. The number of participants should not be too low, or the result might be biased and will not express the true performance of the application
-\item Expert Evaluation form: This method is to use form made with technical questions to ask the expert in the field of computer engineering or software developer after we send our application to them to test. The questions must be related to the project objectives, and with an odd number of experts participating, we can also get a consensus on whether the application is successful or not.
+\item \textbf{Automated testing (code-level):} Unit tests written alongside the source code to verify the correctness of individual functions, modules, and persistence layers. The frontend is tested with the Bun test runner (\texttt{bun test}), with test files organized in a dedicated \texttt{tests/} directory mirroring the \texttt{src/} hierarchy. The backend is tested with \texttt{cargo test --lib}, with tests organized in a dedicated \texttt{src/tests/} module tree mirroring the source hierarchy and gated by a single \texttt{\#[cfg(test)] mod tests;} declaration in \texttt{lib.rs}. This layer protects against regressions during development and enforces the data contract between the frontend and backend.
+\item \textbf{Persona-based benchmark (system-level):} An automated functional benchmark that measures the application's file-classification accuracy on realistic test files grouped by user persona (Student, HR Officer, Designer). This layer answers whether the system behaves correctly on real-world inputs.
+\item \textbf{Expert evaluation form (user-level):} A questionnaire-based evaluation completed by experts in computer engineering or software development. The questions are derived from the project objectives, and an odd number of experts participate so that a consensus on the application's success can be obtained.
 \end{itemize}
-In this case Expert Evaluation form is more appropriate choice and better for the performance analysis and conclusion of this project.
+Among the three layers, the Expert Evaluation form is treated as the primary qualitative method for the overall performance analysis and conclusion of this project, while the automated tests and the persona-based benchmark provide the supporting quantitative evidence.
 
 \chapter{Results and Analysis}
 \section{Finished Product}
@@ -534,6 +535,109 @@ The project ``AI-powered file organizer application'' was conducted according to
 \item Collecting data for development and improvement
 \item Analyzing data and summarizing the project results
 \end{itemize}
+
+\section{Automated Test Results}
+In addition to the higher-level evaluations described in the following sections, an automated unit-test suite was developed alongside the source code of both the frontend and the backend. The purpose of these tests is to verify code-level correctness, to enforce the data contract shared between the two layers (for example, the serde \texttt{camelCase} field naming used by all entities crossing the Tauri boundary), and to provide regression safety during ongoing development. All tests in both suites currently pass.
+
+\subsection{Frontend Test Suite}
+The frontend test suite is executed using \texttt{bun test}, Bun's built-in Jest-compatible test runner. Test files are organized in a dedicated \texttt{tests/} directory at the package root, whose internal structure mirrors the \texttt{src/} hierarchy (for example, tests for \texttt{src/lib/*} live under \texttt{tests/lib/*}, and tests for \texttt{src/stores/*} live under \texttt{tests/stores/*}), and follow the \texttt{*.test.ts} naming convention. Imports use the \texttt{@/*} TypeScript path alias so each test references its module under test by the same logical path as the rest of the application code. The scope of the suite covers pure utility functions and the Zustand state stores; React components, Tauri \texttt{invoke} calls, and end-to-end flows are intentionally not covered at this layer, as they are exercised by the persona-based benchmark and the expert evaluation. The suite contains \textbf{72 tests across 8 files} (91 assertions), all passing, with a total runtime of approximately 545~ms.
+
+\begin{table}[H]
+\centering
+\caption{Frontend unit-test files and their coverage}
+\begin{tabular}{|p{0.34\textwidth}|p{0.22\textwidth}|p{0.34\textwidth}|}
+\hline
+\textbf{File} & \textbf{Module under test} & \textbf{What it covers} \\
+\hline
+tests/lib/category-utils.test.ts & Category helpers & Category name normalization, matching, defaults \\
+\hline
+tests/lib/error-utils.test.ts & Error helpers & Error message extraction, error-shape normalization \\
+\hline
+tests/lib/path-utils.test.ts & Path helpers & Path joining, parent extraction, separator normalization (Windows/POSIX) \\
+\hline
+tests/lib/scoring-utils.test.ts & Scoring helpers & Score ranking, top-category selection, tie handling \\
+\hline
+tests/lib/text-utils.test.ts & Text helpers & String formatting, truncation, sanitization \\
+\hline
+tests/lib/utils.test.ts & General utils & \texttt{cn()} class merging and other shared utilities \\
+\hline
+tests/stores/use-rule-store.test.ts & Zustand rule store & Rule CRUD actions, store-state transitions \\
+\hline
+tests/stores/use-undo-redo-store.test.ts & Undo/redo store & Undo/redo stack, history bounds, state restoration \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Backend Test Suite}
+The backend test suite is executed using \texttt{cargo test --lib}. Tests are organized in a dedicated \texttt{src/tests/} module tree whose internal structure mirrors the source hierarchy: each production module (for example \texttt{services/rule\_service.rs}) has a corresponding test file at the equivalent path under \texttt{src/tests/} (in this example \texttt{src/tests/services/rule\_service\_tests.rs}). The entire test tree is gated by \texttt{\#[cfg(test)] mod tests;} declared in \texttt{lib.rs}, which guarantees that all test code -- together with the \texttt{tempfile} development dependency used for filesystem fixtures and the hand-rolled in-memory fake repositories used for service-layer tests -- is stripped from release builds and has zero runtime impact on the production binary. The scope covers domain serde contracts, JSON-backed repositories (exercised against temporary directories), service-layer orchestration (exercised against in-memory fake repositories), and the sidecar idle-stop timer. Tauri command handlers, filesystem watchers, the sidecar subprocess manager, OAuth, and application paths are intentionally not covered, as they are runtime-coupled and are validated through the higher-level evaluations. The suite contains \textbf{37 tests across 9 modules}, all passing, with a total runtime of approximately 30~ms.
+
+\begin{table}[H]
+\centering
+\caption{Backend unit-test modules and their coverage}
+\begin{tabular}{|p{0.36\textwidth}|p{0.11\textwidth}|p{0.42\textwidth}|}
+\hline
+\textbf{File} & \textbf{Layer} & \textbf{What it covers} \\
+\hline
+src/tests/domain/entities\_tests.rs & Domain & Domain-entity serialization contract, JSON round-trip encoding and decoding (prevents accidental field renames from breaking the frontend) \\
+\hline
+src/tests/domain/scoring\_strategy\_tests.rs & Domain & Scoring-provider identity and factory selection \\
+\hline
+src/tests/repositories/json\_rule\_repository\_tests.rs & Persistence & Rule persistence: missing, empty, and malformed file handling, save/list round-trip, overwrite behavior \\
+\hline
+src/tests/repositories/json\_category\_repository\_tests.rs & Persistence & Category persistence: default fallback when no file exists, JSON parsing, malformed-input error handling \\
+\hline
+src/tests/repositories/json\_history\_repository\_tests.rs & Persistence & History-log persistence: append and list ordering, empty-file handling, parse-error reporting \\
+\hline
+src/tests/repositories/json\_automation\_config\_repository\_tests.rs & Persistence & Automation-config persistence: default fallback, save/load round-trip, automatic parent-directory creation \\
+\hline
+src/tests/services/rule\_service\_tests.rs & Service & Rule service orchestration: delegation to repository, propagation of list and save errors \\
+\hline
+src/tests/services/category\_service\_tests.rs & Service & Category service orchestration: pass-through to repository, empty-result handling, error propagation \\
+\hline
+src/tests/services/history\_service\_tests.rs & Service & History service orchestration: write and list ordering, error propagation \\
+\hline
+src/tests/sidecars/llama\_server\_tests.rs & Sidecar & Sidecar idle-stop timer: triggers after the timeout, holds before the timeout, stays disabled when no activity has been recorded \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Worker Test Suite}
+A dedicated test suite for the background worker layer is planned for a future iteration of the project. This suite will cover the worker's job-scheduling logic, the IPC contract between the worker and the main backend process, and error-recovery behavior when worker tasks fail or are cancelled. Once implemented, its results will be reported here following the same structure used for the frontend and backend suites above, and an additional column will be added to the combined summary table in Section~4.2.4.
+
+\subsection{Combined Test Summary}
+Across both currently implemented suites, the project has \textbf{109 automated tests in total} (72 frontend + 37 backend), all passing, with a combined runtime of approximately 575~ms. The summary below consolidates the runners, conventions, and scope of each suite; the Worker column is reserved for the planned worker-layer suite described in Section~4.2.3.
+
+\begin{table}[H]
+\centering
+\caption{Combined summary of the automated test suites}
+\small
+\begin{tabular}{|p{0.16\textwidth}|p{0.24\textwidth}|p{0.30\textwidth}|p{0.18\textwidth}|}
+\hline
+ & \textbf{Frontend} & \textbf{Backend} & \textbf{Worker (planned)} \\
+\hline
+Runner       & \texttt{bun test} & \texttt{cargo test --lib} & --- \\
+\hline
+Test files   & 8 & 9 & --- \\
+\hline
+Tests        & 72 & 37 & --- \\
+\hline
+Result       & 72 pass / 0 fail & 37 pass / 0 fail & --- \\
+\hline
+Duration     & $\sim$545~ms & $\sim$30~ms & --- \\
+\hline
+Style        & Separate \texttt{tests/} directory at the package root, mirroring the \texttt{src/} hierarchy; imports use the \texttt{@/*} path alias & Separate \texttt{src/tests/} module tree mirroring the source hierarchy, gated by \texttt{\#[cfg(test)] mod tests;} in \texttt{lib.rs} & --- \\
+\hline
+Scope        & Pure utils + Zustand stores & Domain serde, JSON repos (with \texttt{tempfile}), services (with fake repos), sidecar idle-stop & --- \\
+\hline
+Out of scope & React components, Tauri \texttt{invoke}, E2E & Tauri command handlers, fs watchers, sidecar subprocess, OAuth & --- \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Discussion}
+The automated test suites provide strong confidence in the code-level correctness of the project: the 72 frontend tests verify that the pure utility functions and Zustand stores behave as specified, and the 37 backend tests verify that the domain entities serialize correctly across the Tauri boundary, that the JSON-backed repositories handle missing, empty, and malformed inputs safely, and that the service layer correctly delegates to and propagates errors from its repositories. The serde round-trip tests on the domain entities are particularly important, as they prevent accidental field renames from silently breaking the frontend--backend contract.
+
+These tests, however, do not by themselves prove that the application is useful or that the end-to-end user experience is correct. Component-level rendering, the live Tauri \texttt{invoke} bridge, filesystem watchers, the sidecar subprocess, and the AI classification quality are deliberately validated by the higher-level evaluations: the persona-based benchmark in Section~4.3 measures classification accuracy on realistic inputs, and the expert evaluation in Section~4.4 captures qualitative judgements about usability, security, and overall fit for real-world use. Taken together, the three layers form a complete evaluation of the project from code level up to user level.
 
 \section{Persona-Based Benchmark Evaluation}
 In addition to the expert evaluation, an automated benchmark was conducted to quantitatively measure the file classification accuracy of the ``AI-powered file organizer application'' across different real-world user profiles. This benchmark complements the expert evaluation by providing objective, reproducible measurements of the system's core classification capability.
