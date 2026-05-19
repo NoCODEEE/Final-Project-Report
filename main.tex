@@ -545,25 +545,25 @@ The frontend test suite is executed using \texttt{bun test}, Bun's built-in Jest
 \begin{table}[H]
 \centering
 \caption{Frontend unit-test files and their coverage}
-\begin{tabular}{|p{0.34\textwidth}|p{0.22\textwidth}|p{0.34\textwidth}|}
+\begin{tabular}{|p{0.30\textwidth}|p{0.60\textwidth}|}
 \hline
-\textbf{File} & \textbf{Module under test} & \textbf{What it covers} \\
+\textbf{Module under test} & \textbf{What it covers} \\
 \hline
-tests/lib/category-utils.test.ts & Category helpers & Category name normalization, matching, defaults \\
+Category helpers & Category name normalization, matching, and defaults \\
 \hline
-tests/lib/error-utils.test.ts & Error helpers & Error message extraction, error-shape normalization \\
+Error helpers & Error-message extraction and error-shape normalization \\
 \hline
-tests/lib/path-utils.test.ts & Path helpers & Path joining, parent extraction, separator normalization (Windows/POSIX) \\
+Path helpers & Path joining, parent extraction, and separator normalization across Windows and POSIX \\
 \hline
-tests/lib/scoring-utils.test.ts & Scoring helpers & Score ranking, top-category selection, tie handling \\
+Scoring helpers & Score ranking, top-category selection, and tie handling \\
 \hline
-tests/lib/text-utils.test.ts & Text helpers & String formatting, truncation, sanitization \\
+Text helpers & String formatting, truncation, and sanitization \\
 \hline
-tests/lib/utils.test.ts & General utils & \texttt{cn()} class merging and other shared utilities \\
+General utilities & Class-name merging and other shared helpers \\
 \hline
-tests/stores/use-rule-store.test.ts & Zustand rule store & Rule CRUD actions, store-state transitions \\
+Rule store (Zustand) & Rule create, read, update, delete actions and store-state transitions \\
 \hline
-tests/stores/use-undo-redo-store.test.ts & Undo/redo store & Undo/redo stack, history bounds, state restoration \\
+Undo/redo store & Undo and redo stack, history bounds, and state restoration \\
 \hline
 \end{tabular}
 \end{table}
@@ -574,29 +574,29 @@ The backend test suite is executed using \texttt{cargo test --lib}. Tests are or
 \begin{table}[H]
 \centering
 \caption{Backend unit-test modules and their coverage}
-\begin{tabular}{|p{0.36\textwidth}|p{0.11\textwidth}|p{0.42\textwidth}|}
+\begin{tabular}{|p{0.30\textwidth}|p{0.13\textwidth}|p{0.47\textwidth}|}
 \hline
-\textbf{File} & \textbf{Layer} & \textbf{What it covers} \\
+\textbf{Module under test} & \textbf{Layer} & \textbf{What it covers} \\
 \hline
-src/tests/domain/entities\_tests.rs & Domain & Domain-entity serialization contract, JSON round-trip encoding and decoding (prevents accidental field renames from breaking the frontend) \\
+Domain entities & Domain & Domain-entity serialization contract and JSON round-trip encoding and decoding (prevents accidental field renames from breaking the frontend) \\
 \hline
-src/tests/domain/scoring\_strategy\_tests.rs & Domain & Scoring-provider identity and factory selection \\
+Scoring strategy & Domain & Scoring-provider identity and factory selection \\
 \hline
-src/tests/repositories/json\_rule\_repository\_tests.rs & Persistence & Rule persistence: missing, empty, and malformed file handling, save/list round-trip, overwrite behavior \\
+Rule repository & Persistence & Rule persistence: missing, empty, and malformed file handling, save/list round-trip, and overwrite behavior \\
 \hline
-src/tests/repositories/json\_category\_repository\_tests.rs & Persistence & Category persistence: default fallback when no file exists, JSON parsing, malformed-input error handling \\
+Category repository & Persistence & Category persistence: default fallback when no file exists, JSON parsing, and malformed-input error handling \\
 \hline
-src/tests/repositories/json\_history\_repository\_tests.rs & Persistence & History-log persistence: append and list ordering, empty-file handling, parse-error reporting \\
+History repository & Persistence & History-log persistence: append and list ordering, empty-file handling, and parse-error reporting \\
 \hline
-src/tests/repositories/json\_automation\_config\_repository\_tests.rs & Persistence & Automation-config persistence: default fallback, save/load round-trip, automatic parent-directory creation \\
+Automation-config repository & Persistence & Automation-config persistence: default fallback, save/load round-trip, and automatic parent-directory creation \\
 \hline
-src/tests/services/rule\_service\_tests.rs & Service & Rule service orchestration: delegation to repository, propagation of list and save errors \\
+Rule service & Service & Rule service orchestration: delegation to the repository and propagation of list and save errors \\
 \hline
-src/tests/services/category\_service\_tests.rs & Service & Category service orchestration: pass-through to repository, empty-result handling, error propagation \\
+Category service & Service & Category service orchestration: pass-through to the repository, empty-result handling, and error propagation \\
 \hline
-src/tests/services/history\_service\_tests.rs & Service & History service orchestration: write and list ordering, error propagation \\
+History service & Service & History service orchestration: write and list ordering, and error propagation \\
 \hline
-src/tests/sidecars/llama\_server\_tests.rs & Sidecar & Sidecar idle-stop timer: triggers after the timeout, holds before the timeout, stays disabled when no activity has been recorded \\
+Llama sidecar & Sidecar & Sidecar idle-stop timer: triggers after the timeout, holds before the timeout, and stays disabled when no activity has been recorded \\
 \hline
 \end{tabular}
 \end{table}
@@ -927,6 +927,21 @@ The result from the Expert Evaluation from stated that the experts' opinions reg
 \item Add API Endpoints so that other systems can access and use the application.
 \item Develop a Health Check Dashboard for IT administrators to monitor system status.
 \end{enumerate}
+
+\section{Future Work}
+In addition to the short-term recommendations listed above, the project advisor identified four longer-term directions for extending the application. These are larger in scope than the recommendations above -- each one introduces a new capability, a new architectural component, or a new class of file -- and are therefore presented separately as future-work items rather than as immediate suggestions.
+
+\subsection*{1. Expanded File-Type Support: Audio and Video}
+The current version of the application supports text-based documents (PDF, Word, Excel, PowerPoint, TXT) and images. A natural extension is to add support for audio files (such as MP3 and WAV) and video files (such as MP4 and MOV), which are increasingly common in personal and professional file libraries. For audio, a locally runnable speech-to-text model (for example a Whisper-family model) could transcribe the audio content into text, after which the existing content-based categorization logic would apply unchanged. For video, the same approach could be combined with keyframe extraction so that both the visual content (via the image-understanding pipeline) and the spoken content (via transcription) contribute to the categorization decision. This extension would allow the application to organize a much wider range of real-world file libraries without changing its core architecture.
+
+\subsection*{2. Semantic and Contextual Image Understanding}
+The current image-classification capability operates primarily at the object level, recognizing concepts such as ``a cat'', ``a dog'', or ``a person.'' A more powerful future capability is scene-level and event-level understanding -- for example, recognizing that a set of photographs depicts ``a travel trip with friends in front of historical architecture'' rather than merely ``people and buildings.'' This kind of contextual interpretation would allow the application to group personal photo libraries by meaningful events (trips, ceremonies, projects) instead of by isolated objects. The main constraint today is the size and capability of vision-language models that can run fully on-device under the project's offline-first requirement. As smaller, more capable VLMs continue to be released, this capability is expected to become practical to integrate without compromising the local-only architecture.
+
+\subsection*{3. Parallel and Concurrent File Indexing}
+The current file-indexing pipeline processes files largely in sequence, which is sufficient for the typical workloads tested in this project but does not scale efficiently to libraries containing hundreds of thousands of files. A future iteration could redesign the indexing layer around a parallel, multi-worker model: the file-scanning stage would split the workload across worker threads or processes, each worker would handle a partition of the file tree independently, and a coordinator would aggregate results back into the central database. Operating-system primitives such as thread pools, work-stealing queues, and asynchronous I/O would be used to maximize throughput on multi-core machines while keeping the user interface responsive. This change would substantially reduce the time required to perform a full initial scan of large file libraries.
+
+\subsection*{4. Large-Folder Handling and Automatic Sharding}
+A known limitation observed in real-world use is that the Windows file system and Windows Explorer become slow or unresponsive when a single folder contains a very large number of files -- for example, after a bulk download of 10,000 or more images into the same destination folder. To prevent this from happening as a side effect of automated organization, a future feature could detect when a destination folder is approaching an unsafe file count and automatically shard its contents into sub-folders using a partition key such as the file's creation date (\texttt{2026/05/}), the first letter of the file name (\texttt{A/}, \texttt{B/}, \texttt{C/}, \dots), or a configurable category-specific scheme. The sharding policy would be exposed in the application's settings so that users can choose the partition key that best matches their workflow, and the existing Preview and Undo system would continue to apply so that any sharding action can be reviewed and reverted.
 
 \chapter*{REFERENCES}\addcontentsline{toc}{chapter}{REFERENCES}
 \begin{enumerate}[label=\arabic*.,leftmargin=0.6in]
