@@ -534,6 +534,57 @@ The project ``AI-powered file organizer application'' was conducted according to
 \item Collecting data for development and improvement
 \item Analyzing data and summarizing the project results
 \end{itemize}
+
+\section{Persona-Based Benchmark Evaluation}
+In addition to the expert evaluation, an automated benchmark was conducted to quantitatively measure the file classification accuracy of the ``AI-powered file organizer application'' across different real-world user profiles. This benchmark complements the expert evaluation by providing objective, reproducible measurements of the system's core classification capability.
+
+\subsection*{Benchmark Setup}
+Three user personas were defined to represent distinct document domains commonly encountered in real-world use:
+
+\begin{itemize}
+\item \textbf{Persona 1 -- Student:} test files drawn from six folders representing typical academic work (Assignments, ExamPrep, LabReports, LectureSlides, ProjectFiles, and ResearchPapers).
+\item \textbf{Persona 2 -- HR Officer:} test files drawn from five folders representing common human-resources documents (EmployeeRecords, MeetingMinutes, PoliciesAndProcedures, Recruitment, and TrainingMaterials).
+\item \textbf{Persona 3 -- Designer:} test files drawn from six folders representing creative-industry documents (ClientBriefs, ContractsAndProposals, InspirationAndReferences, Invoices, Portfolio, and ProjectDeliverables).
+\end{itemize}
+
+For each persona, 20 test files were prepared (60 files in total). Each file was passed to the application, which returned its top-5 ranked folder suggestions. The result for each file was then classified using the following scoring criteria:
+
+\begin{itemize}
+\item \textbf{Correct} -- the top-1 suggestion matches the correct destination folder.
+\item \textbf{Almost Correct} -- the top-1 suggestion is incorrect, but the correct folder appears as the second-ranked suggestion.
+\item \textbf{Incorrect} -- the correct folder appears at rank 3--5, or does not appear in the top-5 suggestions at all.
+\end{itemize}
+
+\subsection*{Benchmark Results}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/benchmark_personas.png}
+\caption{Benchmark results by persona (20 files tested per persona)}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Summary of benchmark results across the three personas}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Persona} & \textbf{Correct} & \textbf{Almost Correct} & \textbf{Incorrect} & \textbf{Total} \\
+\hline
+Persona 1 -- Student     & 14 (70\%) & 4 (20\%) & 2 (10\%) & 20 \\
+\hline
+Persona 2 -- HR Officer  & 16 (80\%) & 3 (15\%) & 1 (5\%)  & 20 \\
+\hline
+Persona 3 -- Designer    & 15 (75\%) & 3 (15\%) & 2 (10\%) & 20 \\
+\hline
+\textbf{Overall}         & \textbf{45 (75.0\%)} & \textbf{10 (16.7\%)} & \textbf{5 (8.3\%)} & \textbf{60} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{Analysis}
+The benchmark results show that the application performs consistently across all three personas. Considering the top-1 suggestion alone, the system achieved an average accuracy of 75.0\%, with the HR Officer persona producing the highest accuracy (80\%) and the Student persona the lowest (70\%). When the ``Almost Correct'' cases are included -- that is, when the correct folder appears within the top-2 suggestions -- the combined acceptable rate rises to 91.7\% overall (90\% for Student, 95\% for HR Officer, and 90\% for Designer). Only 8.3\% of files (5 of 60) fell into the Incorrect category.
+
+These results indicate that the system generalizes well across document domains with very different vocabulary and structure, from academic papers to HR policy documents to creative client briefs. The slightly lower accuracy on the Student persona can be attributed to overlapping content between related academic folders (for example, lab reports and project files often share similar terminology), while HR documents tend to use more distinctive domain-specific vocabulary that the model classifies more reliably. Overall, the benchmark supports the expert evaluation findings and confirms that the application's classification capability is suitable for practical, real-world use across diverse user profiles.
+
 \section{Methodology}
 \subsection*{Expert Evaluation tool for Application Performance}
 
