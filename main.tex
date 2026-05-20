@@ -518,15 +518,7 @@ Among the three layers, the Expert Evaluation form is treated as the primary qua
 
 \chapter{Results and Analysis}
 \section{Finished Product}
-\begin{figure}[H]\centering
-\includegraphics[width=0.9\textwidth]{figures/figure_3.png}
-\caption{Dashboard page of the application}
-\end{figure}
-\begin{figure}[H]\centering
-\includegraphics[width=0.9\textwidth]{figures/figure_4.png}
-\caption{Settings page of the application}
-\end{figure}
-The project ``AI-powered file organizer application'' was conducted according to the following steps:
+The project ``AI-powered file organizer application'', named KLIN, was conducted according to the following steps:
 
 \begin{itemize}
 \item Studying project-related information
@@ -535,6 +527,114 @@ The project ``AI-powered file organizer application'' was conducted according to
 \item Collecting data for development and improvement
 \item Analyzing data and summarizing the project results
 \end{itemize}
+
+The remainder of this section presents the finished application through screenshots of the actual product, grouped by feature area.
+
+\subsection*{First-Time Setup}
+When KLIN is launched for the first time, it guides the user through a short setup process. The user is welcomed by the setup screen, the required local AI models are downloaded, and a four-step wizard collects the base path, categories, and watched folders. All AI models run entirely on the user's device, so files and notes never leave the local machine.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_setup_welcome.png}
+\caption{The first-time setup welcome screen}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_setup_models.png}
+\caption{Downloading the local AI models during setup; all models run on-device}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_setup_wizard.png}
+\caption{The guided four-step setup wizard (base path, categories, watched folders, and confirmation)}
+\end{figure}
+
+\subsection*{Dashboard}
+The Dashboard is the main screen of the application. It summarizes the organized categories and their file counts, provides the AI Organizer drop zone for adding new files, and displays a live activity feed of recent file movements.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_dashboard.png}
+\caption{The Dashboard (File Intelligence Hub) of the application}
+\end{figure}
+
+\subsection*{AI File Organizer}
+The AI File Organizer is the core feature of the application. After files are added, the system analyzes each file's content and presents the top five category suggestions together with the proposed destination folder. The user reviews these suggestions in a preview before approving the move.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_organize_suggest.png}
+\caption{The AI Organizer showing the top-five category suggestions and the proposed destination for a file}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_organize_done.png}
+\caption{The AI Organizer after all files have been processed and moved}
+\end{figure}
+
+\subsection*{Activity History}
+Every file operation performed by the application is recorded in the Activity History page. Each entry can be reverted individually, and the page also supports undoing or redoing all recorded operations.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_history.png}
+\caption{The Activity History page, listing every file operation with per-item Undo}
+\end{figure}
+
+\subsection*{Calendar Integration}
+The application can detect calendar events contained in documents, such as meeting or interview dates, and add them to the user's Google Calendar. The Calendar page displays these events and stays synchronized with Google Calendar.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_calendar.png}
+\caption{The Calendar page, synchronized with Google Calendar}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_calendar_detect.png}
+\caption{Automatic detection of a calendar event extracted from a document}
+\end{figure}
+
+\subsection*{Notes and AI Summaries}
+The Notes page lets users keep notes alongside their files. Using the AI Summarize function, the application can read a document and generate a concise summary note, allowing the user to understand a file's content without opening it.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_notes.png}
+\caption{The Notes page of the application}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.8\textwidth]{figures/feature/feat_note_summary.png}
+\caption{An AI-generated summary note created from a document}
+\end{figure}
+
+\subsection*{Application Settings}
+The Settings page is divided into five sections. The Account section manages the connected Google account; Configuration sets the default output folder, watched folders, and AI categories, and can also import an existing folder structure as categories in a single batch operation; Automation controls the Auto Organize background watcher and manual scanning; Model manages the local AI models; and Security provides a vault for locking files and folders so that they are never sent to the AI.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_settings_account.png}
+\caption{Settings -- Account: the connected Google account}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_settings_config.png}
+\caption{Settings -- Configuration: default output folder, watched folders, and AI categories}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_batch_category.png}
+\caption{The batch import dialog, opened from the Configuration section, for importing an existing folder structure as AI categories in a single operation}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_settings_automation.png}
+\caption{Settings -- Automation: the Auto Organize watcher and manual scan}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_settings_model.png}
+\caption{Settings -- Model: management of the local AI models}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\textwidth]{figures/feature/feat_settings_security.png}
+\caption{Settings -- Security: the Security Vault for locking files and folders from AI processing}
+\end{figure}
 
 \section{Automated Test Results}
 In addition to the higher-level evaluations described in the following sections, an automated unit-test suite was developed alongside the source code of both the frontend and the backend. The purpose of these tests is to verify code-level correctness, to enforce the data contract shared between the two layers (for example, the serde \texttt{camelCase} field naming used by all entities crossing the Tauri boundary), and to provide regression safety during ongoing development. All tests in both suites currently pass.
