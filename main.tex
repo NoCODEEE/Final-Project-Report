@@ -6,11 +6,11 @@
 \newfontfamily\thaifont[
   Script=Thai,
   Scale=1.23,
-  Path=C:/texlive/texmf-local/fonts/truetype/thai/,
-  UprightFont=THSarabunNew.ttf,
-  BoldFont=THSarabunNew-Bold.ttf,
-  ItalicFont=THSarabunNew-Italic.ttf,
-  BoldItalicFont=THSarabunNew-BoldItalic.ttf
+  % Path=C:/texlive/texmf-local/fonts/truetype/thai/,
+  % UprightFont=THSarabunNew.ttf,
+  % BoldFont=THSarabunNew-Bold.ttf,
+  % ItalicFont=THSarabunNew-Italic.ttf,
+  % BoldItalicFont=THSarabunNew-BoldItalic.ttf
 ]{TH Sarabun New}
 \defaultfontfeatures{Mapping=tex-text,Scale=1.0,LetterSpace=0.0}
 \setmainfont[Scale=1.0,LetterSpace=0,WordSpace=1.0,FakeStretch=1.0]{Times New Roman}
@@ -82,7 +82,7 @@
 \vspace*{-1cm}
 
 \maketitlepage
-\makesignaturepage
+% \makesignaturepage
 
 \abstract
 The project, “AI-powered file organizer application”, is motivated by the fact that nowadays almost everyone owns a computer and inevitable to create or handle “files.” The number of them is enormous, managing them can become troublesome. This project is going to address this common problem by developing a desktop application that can automatically read and understand file's content to organize files with more precision. Our objective then is for this solution to assist with and reduce the burden of manual file management. Furthermore, aside from organization, it may also integrate AI to perform more advanced actions which aims to establish a foundation for agentic systems related to file management such as summarization, note taking, searching or calendar taking. Everything must be done locally, bringing greater convenience and ease to users. The performance evaluation of the “AI-powered file organizer application” showed that the overall performance was at the level of effectively solving the problem with minor improvements possible (mean score of 4.31) and standard deviation was 0.19, indicating that the experts’ opinions regarding the application’s performance were similar and consistent. The experts also provided overall comments on the “AI-powered file organizer application”, stating that the application has academic value and can be applied in real-world use. It can be further developed as an Open-Source Project. The application has a very strong foundation and is ready for personal use or small teams.
@@ -510,7 +510,7 @@ So, the basic workflow should be like this:
 To conform with objectives of this project which is a service invention project in the form of a desktop application, the evaluation method must include both Performance testing and End-user opinion. To cover both aspects in a structured way, the evaluation strategy of this project is organized into three complementary layers, each answering a different question about the system:
 
 \begin{itemize}
-\item \textbf{Automated testing (code-level):} Unit tests written alongside the source code to verify the correctness of individual functions, modules, and persistence layers. The frontend is tested with the Bun test runner (\texttt{bun test}), with test files organized in a dedicated \texttt{tests/} directory mirroring the \texttt{src/} hierarchy. The backend is tested with \texttt{cargo test --lib}, with tests organized in a dedicated \texttt{src/tests/} module tree mirroring the source hierarchy and gated by a single \texttt{\#[cfg(test)] mod tests;} declaration in \texttt{lib.rs}. This layer protects against regressions during development and enforces the data contract between the frontend and backend.
+\item \textbf{Automated testing (code-level):} Unit tests written alongside the source code to verify the correctness of individual functions, modules, and persistence layers. The frontend will be tested with the Bun test runner. The backend is tested with cargo test lib. All tests organized in a dedicated \texttt{*/tests/} module. This layer protects against regressions during development and enforces the data contract between the frontend and backend.
 \item \textbf{Persona-based benchmark (system-level):} An automated functional benchmark that measures the application's file-classification accuracy on realistic test files grouped by user persona (Student, HR Officer, Designer). This layer answers whether the system behaves correctly on real-world inputs.
 \item \textbf{Expert evaluation form (user-level):} A questionnaire-based evaluation completed by experts in computer engineering or software development. The questions are derived from the project objectives, and an odd number of experts participate so that a consensus on the application's success can be obtained.
 \end{itemize}
@@ -528,7 +528,7 @@ The project ``AI-powered file organizer application'', named KLIN, was conducted
 \item Analyzing data and summarizing the project results
 \end{itemize}
 
-The remainder of this section presents the finished application through screenshots of the actual product, grouped by feature area.
+The remainder of this section presents the finished application through screenshots of the actual product, grouped by feature area:
 
 \subsection*{First-Time Setup}
 When KLIN is launched for the first time, it guides the user through a short setup process. The user is welcomed by the setup screen, the required local AI models are downloaded, and a four-step wizard collects the base path, categories, and watched folders. All AI models run entirely on the user's device, so files and notes never leave the local machine.
@@ -637,10 +637,10 @@ The Settings page is divided into five sections. The Account section manages the
 \end{figure}
 
 \section{Automated Test Results}
-In addition to the higher-level evaluations described in the following sections, an automated unit-test suite was developed alongside the source code of both the frontend and the backend. The purpose of these tests is to verify code-level correctness, to enforce the data contract shared between the two layers (for example, the serde \texttt{camelCase} field naming used by all entities crossing the Tauri boundary), and to provide regression safety during ongoing development. All tests in both suites currently pass.
+In addition to the higher-level evaluations described in the following sections, an automated unit-test suite was developed alongside the source code of both the frontend and the backend. The purpose of these tests is to verify code-level correctness, to enforce the data contract shared between the two layers and to provide regression safety during ongoing development. All tests in both suites currently pass.
 
 \subsection{Frontend Test Suite}
-The frontend test suite is executed using \texttt{bun test}, Bun's built-in Jest-compatible test runner. Test files are organized in a dedicated \texttt{tests/} directory at the package root, whose internal structure mirrors the \texttt{src/} hierarchy (for example, tests for \texttt{src/lib/*} live under \texttt{tests/lib/*}, and tests for \texttt{src/stores/*} live under \texttt{tests/stores/*}), and follow the \texttt{*.test.ts} naming convention. Imports use the \texttt{@/*} TypeScript path alias so each test references its module under test by the same logical path as the rest of the application code. The scope of the suite covers pure utility functions and the Zustand state stores; React components, Tauri \texttt{invoke} calls, and end-to-end flows are intentionally not covered at this layer, as they are exercised by the persona-based benchmark and the expert evaluation. The suite contains \textbf{72 tests across 8 files} (91 assertions), all passing, with a total runtime of approximately 545~ms.
+The frontend test suite is executed using \texttt{bun test}, Bun's built-in Jest-compatible test runner. Test files are organized in a dedicated directory at the package root, whose internal structure mirrors the \texttt{src/} hierarchy (for example, tests for \texttt{src/lib/*} live under \texttt{tests/lib/*}, and tests for \texttt{src/stores/*} live under \texttt{tests/stores/*}), and follow the \texttt{*.test.ts} naming convention. Imports use the \texttt{@/*} TypeScript path alias so each test references its module under test by the same logical path as the rest of the application code. The scope of the suite covers pure utility functions and the Zustand state stores, while React components, Tauri \texttt{invoke} calls, and end-to-end flows are intentionally not covered at this layer, as they are exercised by the persona-based benchmark and the expert evaluation. The suite contains \textbf{72 tests across 8 files} (91 assertions), all passing, with a total runtime of approximately 545~ms.
 
 \begin{table}[H]
 \centering
@@ -669,7 +669,7 @@ Undo/redo store & Undo and redo stack, history bounds, and state restoration \\
 \end{table}
 
 \subsection{Backend Test Suite}
-The backend test suite is executed using \texttt{cargo test --lib}. Tests are organized in a dedicated \texttt{src/tests/} module tree whose internal structure mirrors the source hierarchy: each production module (for example \texttt{services/rule\_service.rs}) has a corresponding test file at the equivalent path under \texttt{src/tests/} (in this example \texttt{src/tests/services/rule\_service\_tests.rs}). The entire test tree is gated by \texttt{\#[cfg(test)] mod tests;} declared in \texttt{lib.rs}, which guarantees that all test code -- together with the \texttt{tempfile} development dependency used for filesystem fixtures and the hand-rolled in-memory fake repositories used for service-layer tests -- is stripped from release builds and has zero runtime impact on the production binary. The scope covers domain serde contracts, JSON-backed repositories (exercised against temporary directories), service-layer orchestration (exercised against in-memory fake repositories), and the sidecar idle-stop timer. Tauri command handlers, filesystem watchers, the sidecar subprocess manager, OAuth, and application paths are intentionally not covered, as they are runtime-coupled and are validated through the higher-level evaluations. The suite contains \textbf{37 tests across 9 modules}, all passing, with a total runtime of approximately 30~ms.
+The backend test suite is executed using \texttt{cargo test --lib}. Tests are organized in a dedicated \texttt{src/tests/} module tree whose internal structure mirrors the source hierarchy: each production module (for example \texttt{services/rule\_service.rs}) has a corresponding test file at the equivalent path under \texttt{src/tests/} (in this example \texttt{src/tests/services/rule\_service\_tests.rs}). The scope covers domain serde contracts, JSON-backed repositories (exercised against temporary directories), service-layer orchestration (exercised against in-memory fake repositories), and the sidecar idle-stop timer. The suite contains \textbf{37 tests across 9 modules}, all passing, with a total runtime of approximately 30~ms.
 
 \begin{table}[H]
 \centering
@@ -702,10 +702,34 @@ Llama sidecar & Sidecar & Sidecar idle-stop timer: triggers after the timeout, h
 \end{table}
 
 \subsection{Worker Test Suite}
-A dedicated test suite for the background worker layer is planned for a future iteration of the project. This suite will cover the worker's job-scheduling logic, the IPC contract between the worker and the main backend process, and error-recovery behavior when worker tasks fail or are cancelled. Once implemented, its results will be reported here following the same structure used for the frontend and backend suites above, and an additional column will be added to the combined summary table in Section~4.2.4.
+The worker test suite is executed using \texttt{uv run pytest -q} (pytest 9.0.2 on Python 3.13.9 in a uv-managed venv). Tests are organized under a dedicated \texttt{tests/} directory with \texttt{api/}, \texttt{services/}, \texttt{models/}, \texttt{core/}, \texttt{integration/}, and root-level tests (CLI, tracing, versioning). The suite uses pytest markers (\texttt{unit}, \texttt{integration}, \texttt{llm}) and comprehensive fakes to avoid external dependencies, including in-memory SQLite, fake RAG services, and mocked LLM calls.
+
+At the API layer, tests cover the full set of FastAPI routes (health, organize/apply, search, summary/stream, and settings) with attention to validation errors, status-code behavior, pagination, locked-file handling, fallback paths, and SSE response formatting. Service-layer tests exercise the organize pipeline ordering and caching, schedule extraction, background ingest/RAG enqueue, LLM client behavior, classification and embedding logic, scanning safeguards, history and system log behavior, startup checks, lock settings, seed data, and telemetry. Model tests verify Pydantic request/response validators and defaults for organize, search, history, and settings payloads to keep the API contract stable. The suite contains the total of \textbf{260 tests across 37 files}, all passing, with an approximately runtime of  2.35~s.
+
+\begin{table}[H]
+\centering
+\caption{Worker test areas and their coverage}
+\begin{tabular}{|p{0.30\textwidth}|p{0.60\textwidth}|}
+\hline
+\textbf{Area} & \textbf{What it covers} \\
+\hline
+API routes & End-to-end behavior for \texttt{/health}, \texttt{/api/organize}+\texttt{/apply}, \texttt{/api/search}, \texttt{/api/summary}+\texttt{/stream}, and \texttt{/api/settings/*}; verifies validation errors, 2xx/4xx/5xx outcomes, locked-file short-circuiting, RAG fallback, pagination, and SSE response shape using \texttt{TestClient} with an in-memory DB \\
+\hline
+Services & Organize pipeline ordering and caching, schedule extraction and summary workflow, LLM client behavior (truncation, embedding validation), background ingest and RAG enqueue, classification and embeddings, scanner safeguards, history and system log, seed and startup checks, lock settings, and telemetry; all exercised with fakes and in-memory DB \\
+\hline
+Models & Pydantic request/response contracts: validator rules (min-length, color hex, required action), defaults for settings and pagination, and response shapes for organize, search, and history results \\
+\hline
+Core & AI exception helpers and config resolution \\
+\hline
+Integration & Cross-module pipeline behavior (prepare and enqueue) \\
+\hline
+Root & CLI argument parsing, tracing input capture, and version checks \\
+\hline
+\end{tabular}
+\end{table}
 
 \subsection{Combined Test Summary}
-Across both currently implemented suites, the project has \textbf{109 automated tests in total} (72 frontend + 37 backend), all passing, with a combined runtime of approximately 575~ms. The summary below consolidates the runners, conventions, and scope of each suite; the Worker column is reserved for the planned worker-layer suite described in Section~4.2.3.
+Across all three suites, the project has \textbf{369 automated tests in total} (72 frontend + 37 backend + 260 worker), all passing, with a combined runtime of approximately 2.9~s. The summary below consolidates the runners, conventions, and scope of each suite.
 
 \begin{table}[H]
 \centering
@@ -713,31 +737,31 @@ Across both currently implemented suites, the project has \textbf{109 automated 
 \small
 \begin{tabular}{|p{0.16\textwidth}|p{0.24\textwidth}|p{0.30\textwidth}|p{0.18\textwidth}|}
 \hline
- & \textbf{Frontend} & \textbf{Backend} & \textbf{Worker (planned)} \\
+ & \textbf{Frontend} & \textbf{Backend} & \textbf{Worker} \\
 \hline
-Runner       & \texttt{bun test} & \texttt{cargo test --lib} & --- \\
+Runner       & \texttt{bun test} & \texttt{cargo test --lib} & \texttt{uv run pytest -q} \\
 \hline
-Test files   & 8 & 9 & --- \\
+Test files   & 8 & 9 & 37 \\
 \hline
-Tests        & 72 & 37 & --- \\
+Tests        & 72 & 37 & 260 \\
 \hline
-Result       & 72 pass / 0 fail & 37 pass / 0 fail & --- \\
+Result       & 72 pass / 0 fail & 37 pass / 0 fail & 260 pass / 0 fail \\
 \hline
-Duration     & $\sim$545~ms & $\sim$30~ms & --- \\
+Duration     & $\sim$545~ms & $\sim$30~ms & $\sim$2.35~s \\
 \hline
-Style        & Separate \texttt{tests/} directory at the package root, mirroring the \texttt{src/} hierarchy; imports use the \texttt{@/*} path alias & Separate \texttt{src/tests/} module tree mirroring the source hierarchy, gated by \texttt{\#[cfg(test)] mod tests;} in \texttt{lib.rs} & --- \\
+Style        & Separate \texttt{tests/} directory at the package root, mirroring the \texttt{src/} hierarchy; imports use the \texttt{@/*} path alias & Separate \texttt{src/tests/} module tree mirroring the source hierarchy, gated by \texttt{\#[cfg(test)] mod tests;} in \texttt{lib.rs} & Separate \texttt{tests/} directory with \texttt{api/}, \texttt{services/}, \texttt{models/}, \texttt{core/}, \texttt{integration/}, plus root tests; pytest markers for \texttt{unit}, \texttt{integration}, \texttt{llm} \\
 \hline
-Scope        & Pure utils + Zustand stores & Domain serde, JSON repos (with \texttt{tempfile}), services (with fake repos), sidecar idle-stop & --- \\
+Scope        & Pure utils + Zustand stores & Domain serde, JSON repos (with \texttt{tempfile}), services (with fake repos), sidecar idle-stop & API routes, service layer, models, core helpers, integration pipeline, CLI/tracing/version \\
 \hline
-Out of scope & React components, Tauri \texttt{invoke}, E2E & Tauri command handlers, fs watchers, sidecar subprocess, OAuth & --- \\
+Out of scope & React components, Tauri \texttt{invoke}, E2E & Tauri command handlers, fs watchers, sidecar subprocess, OAuth & Live-LLM calls and external services (Postgres, network) \\
 \hline
 \end{tabular}
 \end{table}
 
 \subsection{Discussion}
-The automated test suites provide strong confidence in the code-level correctness of the project: the 72 frontend tests verify that the pure utility functions and Zustand stores behave as specified, and the 37 backend tests verify that the domain entities serialize correctly across the Tauri boundary, that the JSON-backed repositories handle missing, empty, and malformed inputs safely, and that the service layer correctly delegates to and propagates errors from its repositories. The serde round-trip tests on the domain entities are particularly important, as they prevent accidental field renames from silently breaking the frontend--backend contract.
+The automated test suites provide strong confidence in the code-level correctness of the project: the 72 frontend tests verify that the pure utility functions and Zustand stores behave as specified; the 37 backend tests verify that domain entities serialize correctly across the Tauri boundary, that JSON-backed repositories handle missing, empty, and malformed inputs safely, and that the service layer correctly delegates to and propagates errors from its repositories; and the 260 worker tests verify the FastAPI route layer, core helpers, and service pipeline behaviors using in-memory SQLite and mocked AI/RAG dependencies. The serde round-trip tests on the domain entities are particularly important, as they prevent accidental field renames from silently breaking the frontend--backend contract.
 
-These tests, however, do not by themselves prove that the application is useful or that the end-to-end user experience is correct. Component-level rendering, the live Tauri \texttt{invoke} bridge, filesystem watchers, the sidecar subprocess, and the AI classification quality are deliberately validated by the higher-level evaluations: the persona-based benchmark in Section~4.3 measures classification accuracy on realistic inputs, and the expert evaluation in Section~4.4 captures qualitative judgements about usability, security, and overall fit for real-world use. Taken together, the three layers form a complete evaluation of the project from code level up to user level.
+These tests, however, do not by themselves prove that the application is useful or that the end-to-end user experience is correct, and the worker suite intentionally mocks live LLM inference and external services. Component-level rendering, the live Tauri \texttt{invoke} bridge, filesystem watchers, the sidecar subprocess, and the AI classification quality are deliberately validated by the higher-level evaluations: the persona-based benchmark in Section~4.3 measures classification accuracy on realistic inputs, and the expert evaluation in Section~4.4 captures qualitative judgements about usability, security, and overall fit for real-world use. Taken together, the three layers form a complete evaluation of the project from code level up to user level.
 
 \section{Persona-Based Benchmark Evaluation}
 In addition to the expert evaluation, an automated benchmark was conducted to quantitatively measure the file classification accuracy of the ``AI-powered file organizer application'' across different real-world user profiles. This benchmark complements the expert evaluation by providing objective, reproducible measurements of the system's core classification capability.
@@ -789,8 +813,7 @@ The benchmark results show that the application performs consistently across all
 
 These results indicate that the system generalizes well across document domains with very different vocabulary and structure, from academic papers to HR policy documents to creative client briefs. The slightly lower accuracy on the Student persona can be attributed to overlapping content between related academic folders (for example, lab reports and project files often share similar terminology), while HR documents tend to use more distinctive domain-specific vocabulary that the model classifies more reliably. Overall, the benchmark supports the expert evaluation findings and confirms that the application's classification capability is suitable for practical, real-world use across diverse user profiles.
 
-\section{Methodology}
-\subsection*{Expert Evaluation tool for Application Performance}
+\section{Expert Evaluation Form}
 
 The Evaluation tool used to evaluate the application was a performance evaluation form, which will be filled by 3 experts from the field of computer engineering or software development, can be divided into two sections:
 
@@ -1029,19 +1052,19 @@ The result from the Expert Evaluation from stated that the experts' opinions reg
 \end{enumerate}
 
 \section{Future Work}
-In addition to the short-term recommendations listed above, the project advisor identified four longer-term directions for extending the application. These are larger in scope than the recommendations above -- each one introduces a new capability, a new architectural component, or a new class of file -- and are therefore presented separately as future-work items rather than as immediate suggestions.
+In addition to the short-term recommendations listed above, there are four longer-term directions for the future of the project. These are larger in scope than the recommendations above, each one introduces a new capability, new architectural component, or a new class of file. Therefore, it is presented separately as future-work items rather than as immediate suggestions.
 
-\subsection*{1. Expanded File-Type Support: Audio and Video}
-The current version of the application supports text-based documents (PDF, Word, Excel, PowerPoint, TXT) and images. A natural extension is to add support for audio files (such as MP3 and WAV) and video files (such as MP4 and MOV), which are increasingly common in personal and professional file libraries. For audio, a locally runnable speech-to-text model (for example a Whisper-family model) could transcribe the audio content into text, after which the existing content-based categorization logic would apply unchanged. For video, the same approach could be combined with keyframe extraction so that both the visual content (via the image-understanding pipeline) and the spoken content (via transcription) contribute to the categorization decision. This extension would allow the application to organize a much wider range of real-world file libraries without changing its core architecture.
+\subsection*{1. Expanded File-Type Support}
+Extension support for audio files (such as MP3 and WAV) and video files (such as MP4 and MOV), which are increasingly common in personal and professional file libraries. This extension would allow the application to organize a much wider range of real-world file types and covering more in user's need.
 
 \subsection*{2. Semantic and Contextual Image Understanding}
-The current image-classification capability operates primarily at the object level, recognizing concepts such as ``a cat'', ``a dog'', or ``a person.'' A more powerful future capability is scene-level and event-level understanding -- for example, recognizing that a set of photographs depicts ``a travel trip with friends in front of historical architecture'' rather than merely ``people and buildings.'' This kind of contextual interpretation would allow the application to group personal photo libraries by meaningful events (trips, ceremonies, projects) instead of by isolated objects. The main constraint today is the size and capability of vision-language models that can run fully on-device under the project's offline-first requirement. As smaller, more capable VLMs continue to be released, this capability is expected to become practical to integrate without compromising the local-only architecture.
+The current image-classification capability operates primarily at the object level, recognizing concepts such as ``a cat'', ``a dog'', or ``a person.'' A more powerful future capability is scene-level and event-level understanding for example, recognizing that a set of photographs depicts ``a travel trip with friends in front of historical architecture'' rather than merely ``people and buildings.'' This kind of contextual interpretation would allow the application to group personal photo libraries by meaningful events (trips, ceremonies, projects) instead of by isolated objects. The main constraint today is the size and capability of vision-language models that can run fully on-device under the project's offline-first requirement. As smaller, more capable VLMs continue to be released, this capability is expected to become practical to integrate without compromising the local-only architecture.
 
 \subsection*{3. Parallel and Concurrent File Indexing}
-The current file-indexing pipeline processes files largely in sequence, which is sufficient for the typical workloads tested in this project but does not scale efficiently to libraries containing hundreds of thousands of files. A future iteration could redesign the indexing layer around a parallel, multi-worker model: the file-scanning stage would split the workload across worker threads or processes, each worker would handle a partition of the file tree independently, and a coordinator would aggregate results back into the central database. Operating-system primitives such as thread pools, work-stealing queues, and asynchronous I/O would be used to maximize throughput on multi-core machines while keeping the user interface responsive. This change would substantially reduce the time required to perform a full initial scan of large file libraries.
+The current file-indexing pipeline processes files largely in sequence. A future direction is to enable parallel and concurrent indexing so that the application can handle large libraries with much shorter scan times. The intention is to keep performance smooth and the user interface responsive as the collection grows, without changing the user-facing workflow.
 
-\subsection*{4. Large-Folder Handling and Automatic Sharding}
-A known limitation observed in real-world use is that the Windows file system and Windows Explorer become slow or unresponsive when a single folder contains a very large number of files -- for example, after a bulk download of 10,000 or more images into the same destination folder. To prevent this from happening as a side effect of automated organization, a future feature could detect when a destination folder is approaching an unsafe file count and automatically shard its contents into sub-folders using a partition key such as the file's creation date (\texttt{2026/05/}), the first letter of the file name (\texttt{A/}, \texttt{B/}, \texttt{C/}, \dots), or a configurable category-specific scheme. The sharding policy would be exposed in the application's settings so that users can choose the partition key that best matches their workflow, and the existing Preview and Undo system would continue to apply so that any sharding action can be reviewed and reverted.
+\subsection*{4. Large-Folder Handling}
+When a single folder contains a very large number of files, reading it will bring problem or takes too long especially in auto-organzing. The solution is to revise the scanning function to handle pagination or chunking the files first, while also preserving or better the performance of the feature. This will allow the application to work well even with folders containing tens of thousands of files, which is common in real-world use cases such as photo libraries or project archives.
 
 \chapter*{REFERENCES}\addcontentsline{toc}{chapter}{REFERENCES}
 \begin{enumerate}[label=\arabic*.,leftmargin=0.6in]
